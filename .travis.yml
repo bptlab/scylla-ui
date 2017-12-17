@@ -1,12 +1,15 @@
 sudo: required
 dist: trusty
 language: node_js
-node_js:
-  - '6.10'
+node_js: stable
 
 git:
   depth: 3
   lfs_skip_smudge: true
+
+
+cache:
+  directories: node_modules
 
 addons:
 apt:
@@ -22,11 +25,18 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 before_script:
+- npm install -g codecov
+- npm install coveralls
 - npm install -g angular-cli
 - npm install -g karma
 - npm install
-- ng build
+- ng lint
+- ng build --aot --prod
+- ng serve & ng e2e
+- ng test --watch=false --code-coverage
 
-script: karma start config/karma.conf.js --single-run
+script: 
+- codecov
+- cat ./coverage/coverage.lcov | ./node_modules/coveralls/bin/coveralls.js
 
 notifications: false
