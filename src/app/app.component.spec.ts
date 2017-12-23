@@ -24,8 +24,4 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
   }));
-  it('has a dummy spec to test 2 + 2', function() {
-    expect(2 + 2).toEqual(4);
-  });
-
 });
