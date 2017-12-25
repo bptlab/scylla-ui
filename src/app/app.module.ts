@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { 404Component } from './misc/404/404.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    404Component
   ],
   imports: [
     BrowserModule
