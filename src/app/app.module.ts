@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { LandingModule } from './landing/landing.module';
+import { StatisticsModule } from './statistics/statistics.module';
 
 import { AppComponent } from './app.component';
-import { 404Component } from './misc/404/404.component';
+import { NotFoundComponent } from './misc/not-found/not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    404Component
+    NotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    LandingModule,
+    StatisticsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
