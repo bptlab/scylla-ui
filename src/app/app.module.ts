@@ -11,8 +11,8 @@ import { FileSelectionComponent } from './landing/file-selection/file-selection.
 export const ROUTES = [
   { path: 'files', component: FileSelectionComponent },
   { path: '', pathMatch: 'full', redirectTo: '/files' },
-  { path:'**', component: NotFoundComponent }
-]
+  { path: '**', component: NotFoundComponent }
+];
 
 @NgModule({
   declarations: [

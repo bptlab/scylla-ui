@@ -5,7 +5,7 @@ import {
   MatToolbarModule,
   MatButtonModule,
   MatIconModule
-}from '@angular/material';
+} from '@angular/material';
 
 import { FileSelectionComponent } from './file-selection/file-selection.component';
 import { HeaderBarComponent } from './menu/header-bar/header-bar.component';
