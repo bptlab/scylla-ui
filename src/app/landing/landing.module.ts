@@ -8,6 +8,10 @@ import { FooterBarComponent } from './menu/footer-bar/footer-bar.component';
   imports: [
     CommonModule
   ],
-  declarations: [FileSelectionComponent, HeaderBarComponent, FooterBarComponent]
+  declarations: [FileSelectionComponent, HeaderBarComponent, FooterBarComponent],
+  exports: [
+    HeaderBarComponent,
+    FooterBarComponent
+  ]
 })
 export class LandingModule { }
