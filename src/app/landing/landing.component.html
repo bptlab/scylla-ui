@@ -1,3 +1,12 @@
-<app-header-bar></app-header-bar>
-<router-outlet></router-outlet>
-<app-footer-bar></app-footer-bar>
+
+<body>
+    <div class="page-wrap">
+        <app-header-bar></app-header-bar>
+        <main class="content">
+            <router-outlet></router-outlet>
+        </main>
+        <footer>
+            <app-footer-bar></app-footer-bar>
+        </footer>
+    </div>
+</body>
