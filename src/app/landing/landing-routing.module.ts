@@ -13,7 +13,7 @@ export const ROUTES = [
       { path: 'files', component: FileSelectionComponent }
     ]
   }
-]
+];
 
 @NgModule({
   imports: [
