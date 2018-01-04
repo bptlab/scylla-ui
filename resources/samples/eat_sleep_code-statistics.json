@@ -1,0 +1,351 @@
+{
+    "process": {
+        "id": 0,
+        "name": "Sample Process",
+        "reference_unit": "minutes",
+        "statistics": {
+            "num_instances": 3,
+            "cost": {
+                "avg": 100,
+                "total": 300
+            },
+            "time": {
+                "flow_time": 10.5,
+                "effective": {
+                    "min": 40.0,
+                    "max": 60.0,
+                    "median": 50.0,
+                    "avg": 50.0,
+                    "Q1": 45.0,
+                    "Q3": 55.0
+                },
+                "waiting": {
+                    "min": 5.0,
+                    "max": 15.0,
+                    "median": 10.0,
+                    "avg": 10.0,
+                    "Q1": 7.5,
+                    "Q3": 12.5
+                },
+                "off-timetable": {
+                    "min": 40.0,
+                    "max": 60.0,
+                    "median": 50.0,
+                    "avg": 50.0,
+                    "Q1": 45.0,
+                    "Q3": 55.0
+                }
+            }
+        },
+        "instances": [
+            {
+                "id": 0,
+                "statistics": {
+                    "cost": {
+                        "avg": 100,
+                        "total": 300
+                    },
+                    "time": {
+                        "flow_time": 10.5,
+                        "effective": {
+                            "min": 40.0,
+                            "max": 60.0,
+                            "median": 50.0,
+                            "avg": 50.0,
+                            "Q1": 45.0,
+                            "Q3": 55.0
+                        },
+                        "waiting": {
+                            "min": 5.0,
+                            "max": 15.0,
+                            "median": 10.0,
+                            "avg": 10.0,
+                            "Q1": 7.5,
+                            "Q3": 12.5
+                        },
+                        "off-timetable": {
+                            "min": 40.0,
+                            "max": 60.0,
+                            "median": 50.0,
+                            "avg": 50.0,
+                            "Q1": 45.0,
+                            "Q3": 55.0
+                        }
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "statistics": {
+                    "cost": {
+                        "avg": 100,
+                        "total": 300
+                    },
+                    "time": {
+                        "flow_time": 10.5,
+                        "effective": {
+                            "min": 40.0,
+                            "max": 60.0,
+                            "median": 50.0,
+                            "avg": 50.0,
+                            "Q1": 45.0,
+                            "Q3": 55.0
+                        },
+                        "waiting": {
+                            "min": 5.0,
+                            "max": 15.0,
+                            "median": 10.0,
+                            "avg": 10.0,
+                            "Q1": 7.5,
+                            "Q3": 12.5
+                        },
+                        "off-timetable": {
+                            "min": 40.0,
+                            "max": 60.0,
+                            "median": 50.0,
+                            "avg": 50.0,
+                            "Q1": 45.0,
+                            "Q3": 55.0
+                        }
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "statistics": {
+                    "cost": {
+                        "avg": 100,
+                        "total": 300
+                    },
+                    "time": {
+                        "flow_time": 10.5,
+                        "effective": {
+                            "min": 40.0,
+                            "max": 60.0,
+                            "median": 50.0,
+                            "avg": 50.0,
+                            "Q1": 45.0,
+                            "Q3": 55.0
+                        },
+                        "waiting": {
+                            "min": 5.0,
+                            "max": 15.0,
+                            "median": 10.0,
+                            "avg": 10.0,
+                            "Q1": 7.5,
+                            "Q3": 12.5
+                        },
+                        "off-timetable": {
+                            "min": 40.0,
+                            "max": 60.0,
+                            "median": 50.0,
+                            "avg": 50.0,
+                            "Q1": 45.0,
+                            "Q3": 55.0
+                        }
+                    }
+                }
+            }
+        ],
+        "resources": [
+            {
+                "type": "nurse",
+                "instances": [
+                    {
+                        "id": 0,
+                        "name": "nurse1",
+                        "time": {
+                            "in_use": 10,
+                            "available": 50
+                        },
+                        "cost": 50
+                    },
+                    {
+                        "id": 1,
+                        "name": "nurse2",
+                        "time": {
+                            "in_use": 10,
+                            "available": 50
+                        },
+                        "cost": 50 
+                    }
+                ]
+            },
+            {
+                "type": "physician",
+                "instances": [
+                    {
+                        "id": 2,
+                        "name": "physician1",
+                        "time": {
+                            "in_use": 10,
+                            "available": 50
+                        },
+                        "cost": 50
+                    }
+                ]
+            }
+        ],
+        "activities": [
+            {
+                "id": "Task_1suqugc",
+                "name": "eat",
+                "cost": {
+                    "min": 0,
+                    "max": 0,
+                    "median": 0,
+                    "avg": 0,
+                    "Q1": 0,
+                    "Q3": 0
+                },
+                "time": {
+                    "duration": {
+                        "min": 0,
+                        "max": 0,
+                        "median": 0,
+                        "avg": 0,
+                        "Q1": 0,
+                        "Q3": 0
+                    },
+                    "waiting": {
+                        "min": 0,
+                        "max": 0,
+                        "median": 0,
+                        "avg": 0,
+                        "Q1": 0,
+                        "Q3": 0
+                    }
+                },
+                "instances": [
+                    {
+                        "cost": 0,
+                        "time": {
+                            "waiting": 0,
+                            "duration": 0
+                        }
+                    },
+                    {
+                        "cost": 0,
+                        "time": {
+                            "waiting": 0,
+                            "duration": 0
+                        }
+                    },
+                    {
+                        "cost": 0,
+                        "time": {
+                            "waiting": 0,
+                            "duration": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "Task_0qt5qd2",
+                "name": "sleep",
+                "cost": {
+                    "min": 0,
+                    "max": 0,
+                    "median": 0,
+                    "avg": 0,
+                    "Q1": 0,
+                    "Q3": 0
+                },
+                "time": {
+                    "duration": {
+                        "min": 0,
+                        "max": 0,
+                        "median": 0,
+                        "avg": 0,
+                        "Q1": 0,
+                        "Q3": 0
+                    },
+                    "waiting": {
+                        "min": 0,
+                        "max": 0,
+                        "median": 0,
+                        "avg": 0,
+                        "Q1": 0,
+                        "Q3": 0
+                    }
+                },
+                "instances": [
+                    {
+                        "cost": 0,
+                        "time": {
+                            "waiting": 0,
+                            "duration": 0
+                        }
+                    },
+                    {
+                        "cost": 0,
+                        "time": {
+                            "waiting": 0,
+                            "duration": 0
+                        }
+                    },
+                    {
+                        "cost": 0,
+                        "time": {
+                            "waiting": 0,
+                            "duration": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "Task_0w9lsfx",
+                "name": "code",
+                "cost": {
+                    "min": 0,
+                    "max": 0,
+                    "median": 0,
+                    "avg": 0,
+                    "Q1": 0,
+                    "Q3": 0
+                },
+                "time": {
+                    "duration": {
+                        "min": 0,
+                        "max": 0,
+                        "median": 0,
+                        "avg": 0,
+                        "Q1": 0,
+                        "Q3": 0
+                    },
+                    "waiting": {
+                        "min": 0,
+                        "max": 0,
+                        "median": 0,
+                        "avg": 0,
+                        "Q1": 0,
+                        "Q3": 0
+                    }
+                },
+                "instances": [
+                    {
+                        "cost": 0,
+                        "time": {
+                            "waiting": 0,
+                            "duration": 0
+                        }
+                    },
+                    {
+                        "cost": 0,
+                        "time": {
+                            "waiting": 0,
+                            "duration": 0
+                        }
+                    },
+                    {
+                        "cost": 0,
+                        "time": {
+                            "waiting": 0,
+                            "duration": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
