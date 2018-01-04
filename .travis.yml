@@ -40,4 +40,5 @@ script:
 #- cat ./coverage/coverage.lcov | ./node_modules/coveralls/bin/coveralls.js
 - ng test --watch=false
 
-notifications: false
+notifications: 
+  email: false
