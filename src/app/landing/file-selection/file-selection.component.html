@@ -1,10 +1,10 @@
-<label class="uploader" ondragover="return false;"
-       [class.loaded]="loaded"
-       [style.outlineColor]="dragging ? activeColor : baseColor"
-       (dragenter)="handleDragEnter()"
-       (dragleave)="handleDragLeave()"
-       (drop)="handleDrop($event)">
+<mat-card>
+  <mat-card-title>Choose your files</mat-card-title>
+  <mat-card-content>
+    <div class="col s4">  <app-file-reader [data]="bpmn"></app-file-reader>
+    </div> <div class="col s4">  <app-file-reader [data]="bpmn"></app-file-reader>
+  </div> <div class="col s4">  <app-file-reader [data]="bpmn"></app-file-reader>
+  </div>
+  </mat-card-content>
+</mat-card>
 
-  <input type="file" name="file" accept=".bpmn"
-         (change)="handleInputChange($event)">
-</label>
