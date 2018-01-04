@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {FileReaderComponent} from './file-reader/file-reader.component';
 
 @Component({
   selector: 'app-file-selection',
   templateUrl: './file-selection.component.html',
-  styleUrls: ['./file-selection.component.css']
+  styleUrls: ['./file-selection.component.css'],
 })
-export class FileSelectionComponent implements OnInit {
+export class FileSelectionComponent {
 
-  constructor() { }
+  private bpmn = 'bpmn';
 
-  ngOnInit() {
+  constructor() {
+    console.log(this.bpmn);
   }
+
+
 
 }

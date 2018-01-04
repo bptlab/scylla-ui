@@ -4,7 +4,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {
   MatToolbarModule,
   MatButtonModule,
-  MatIconModule
+  MatIconModule,
+  MatCardModule
 } from '@angular/material';
 import { Router, RouterModule } from '@angular/router';
 import { LandingRoutingModule } from './landing-routing.module';
@@ -13,6 +14,7 @@ import { FileSelectionComponent } from './file-selection/file-selection.componen
 import { HeaderBarComponent } from './menu/header-bar/header-bar.component';
 import { FooterBarComponent } from './menu/footer-bar/footer-bar.component';
 import { LandingComponent } from './landing.component';
+import { FileReaderComponent } from './file-selection/file-reader/file-reader.component';
 
 @NgModule({
   imports: [
@@ -21,9 +23,10 @@ import { LandingComponent } from './landing.component';
     BrowserModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
-  declarations: [FileSelectionComponent, HeaderBarComponent, FooterBarComponent, LandingComponent],
+  declarations: [FileSelectionComponent, HeaderBarComponent, FooterBarComponent, LandingComponent, FileReaderComponent],
   exports: [
     LandingComponent,
     RouterModule
