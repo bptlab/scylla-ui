@@ -6,10 +6,12 @@ import {
   MatButtonModule,
   MatIconModule
 } from '@angular/material';
+import { Router, RouterModule } from '@angular/router';
 
 import { FileSelectionComponent } from './file-selection/file-selection.component';
 import { HeaderBarComponent } from './menu/header-bar/header-bar.component';
 import { FooterBarComponent } from './menu/footer-bar/footer-bar.component';
+import { LandingComponent } from './landing.component';
 
 @NgModule({
   imports: [
@@ -19,10 +21,11 @@ import { FooterBarComponent } from './menu/footer-bar/footer-bar.component';
     MatButtonModule,
     MatIconModule
   ],
-  declarations: [FileSelectionComponent, HeaderBarComponent, FooterBarComponent],
+  declarations: [FileSelectionComponent, HeaderBarComponent, FooterBarComponent, LandingComponent],
   exports: [
-    HeaderBarComponent,
-    FooterBarComponent
-  ]
+    LandingComponent,
+    RouterModule
+  ],
+  bootstrap: [LandingComponent]
 })
 export class LandingModule { }

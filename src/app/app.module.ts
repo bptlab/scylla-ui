@@ -6,11 +6,11 @@ import { Router, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './misc/not-found/not-found.component';
-import { FileSelectionComponent } from './landing/file-selection/file-selection.component';
+import { LandingComponent } from './landing/landing.component';
 
 export const ROUTES = [
-  { path: 'files', component: FileSelectionComponent },
-  { path: '', pathMatch: 'full', redirectTo: '/files' },
+  { path: 'landing', component: LandingComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/landing' },
   { path: '**', component: NotFoundComponent }
 ];
 
