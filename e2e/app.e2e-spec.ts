@@ -7,8 +7,15 @@ describe('scylla-ui App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should provide a link to Scylla', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+  });
+
+  it('should provide a link to a Getting Started guide', () => {
+    page.navigateTo();
+  });
+
+  it('should provide a link to the documentation', () => {
+    page.navigateTo();
   });
 });
