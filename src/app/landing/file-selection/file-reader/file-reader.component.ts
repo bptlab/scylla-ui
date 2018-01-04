@@ -7,7 +7,7 @@ import {Component, Input, OnChanges, OnInit} from '@angular/core';
 })
 export class FileReaderComponent {
 
- @Input() data;
+ @Input() data: string;
 
   dragging = false;
   loaded = false;
@@ -53,6 +53,10 @@ export class FileReaderComponent {
     const reader = e.target;
     this.fileSrc = reader.result;
     this.loaded = true;
+  }
+
+  acceptFileFormat(format: string) {
+    return '.' + format;
   }
 
 }

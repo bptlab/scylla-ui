@@ -1,8 +1,6 @@
-<mat-card>
-  <input type="file" name="file" id="file" accept=".bpmn"
-         (change)="handleInputChange($event)" class="inputfile inputfile-6"
-         data-multiple-caption="{count} files selected" multiple>
-  <label for="file" ondragover="return false;"
+<input type="file" [name]="data" [id]="data" [accept]="acceptFileFormat(data)"
+         (change)="handleInputChange($event)" class="inputfile">
+  <label [for]="data" ondragover="return false;"
          [class.loaded]="loaded"
          [style.outlineColor]="dragging ? activeColor : baseColor"
          (dragenter)="handleDragEnter()"
@@ -15,12 +13,7 @@
         </svg>
       </figure>
       <span>
-        Choose a {{this.fileType}} file...
+        Choose a {{data}} file...
       </span>
     </strong>
-
-
   </label>
-
-
-</mat-card>

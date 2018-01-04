@@ -1,10 +1,9 @@
 <mat-card>
-  <mat-card-title>Choose your files</mat-card-title>
+  <mat-card-title>Choose your Scylla output</mat-card-title>
   <mat-card-content>
-    <div class="col s4">  <app-file-reader [data]="bpmn"></app-file-reader>
-    </div> <div class="col s4">  <app-file-reader [data]="bpmn"></app-file-reader>
-  </div> <div class="col s4">  <app-file-reader [data]="bpmn"></app-file-reader>
-  </div>
+    <app-file-reader data="bpmn"></app-file-reader>
+    <app-file-reader data="xes"></app-file-reader>
+    <app-file-reader data="JSON"></app-file-reader>
   </mat-card-content>
 </mat-card>
 
