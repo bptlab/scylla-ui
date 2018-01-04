@@ -71,12 +71,12 @@ declare namespace ProcessStatistics {
     }
 
     export interface Statistics {
-        min: number;
-        max: number;
-        median: number;
-        avg: number;
-        Q1: number;
-        Q3: number;
-        total: number;
+        min?: number;
+        max?: number;
+        median?: number;
+        avg?: number;
+        Q1?: number;
+        Q3?: number;
+        total?: number;
     }
 }
