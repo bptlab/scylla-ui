@@ -7,6 +7,7 @@ import {
   MatIconModule
 } from '@angular/material';
 import { Router, RouterModule } from '@angular/router';
+import { LandingRoutingModule } from './landing-routing.module';
 
 import { FileSelectionComponent } from './file-selection/file-selection.component';
 import { HeaderBarComponent } from './menu/header-bar/header-bar.component';
@@ -15,6 +16,7 @@ import { LandingComponent } from './landing.component';
 
 @NgModule({
   imports: [
+    LandingRoutingModule,
     CommonModule,
     BrowserModule,
     MatToolbarModule,
