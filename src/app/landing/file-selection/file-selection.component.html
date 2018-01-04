@@ -1,3 +1,10 @@
-<p>
-  file-selection works!
-</p>
+<label class="uploader" ondragover="return false;"
+       [class.loaded]="loaded"
+       [style.outlineColor]="dragging ? activeColor : baseColor"
+       (dragenter)="handleDragEnter()"
+       (dragleave)="handleDragLeave()"
+       (drop)="handleDrop($event)">
+
+  <input type="file" name="file" accept=".bpmn"
+         (change)="handleInputChange($event)">
+</label>
