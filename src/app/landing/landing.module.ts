@@ -15,7 +15,7 @@ import { HeaderBarComponent } from './menu/header-bar/header-bar.component';
 import { FooterBarComponent } from './menu/footer-bar/footer-bar.component';
 import { LandingComponent } from './landing.component';
 import { FileReaderComponent } from './file-selection/file-reader/file-reader.component';
-import { ProcessStatisticsService } from '../process-statistics.service';
+import { ProcessStatisticsService } from '../services/statistics/process-statistics.service';
 
 @NgModule({
   imports: [
