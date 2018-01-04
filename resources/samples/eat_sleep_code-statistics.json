@@ -27,7 +27,7 @@
                     "Q1": 7.5,
                     "Q3": 12.5
                 },
-                "off-timetable": {
+                "off_timetable": {
                     "min": 40.0,
                     "max": 60.0,
                     "median": 50.0,
@@ -63,7 +63,7 @@
                             "Q1": 7.5,
                             "Q3": 12.5
                         },
-                        "off-timetable": {
+                        "off_timetable": {
                             "min": 40.0,
                             "max": 60.0,
                             "median": 50.0,
@@ -99,7 +99,7 @@
                             "Q1": 7.5,
                             "Q3": 12.5
                         },
-                        "off-timetable": {
+                        "off_timetable": {
                             "min": 40.0,
                             "max": 60.0,
                             "median": 50.0,
@@ -135,7 +135,7 @@
                             "Q1": 7.5,
                             "Q3": 12.5
                         },
-                        "off-timetable": {
+                        "off_timetable": {
                             "min": 40.0,
                             "max": 60.0,
                             "median": 50.0,
