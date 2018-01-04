@@ -1,2 +1,4 @@
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.jpeg filter=lfs diff=lfs merge=lfs -text
+*.bpmn filter=lfs diff=lfs merge=lfs -text
+*.xes filter=lfs diff=lfs merge=lfs -text
