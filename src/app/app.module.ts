@@ -24,3 +24,4 @@ import { LandingComponent } from './landing/landing.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
