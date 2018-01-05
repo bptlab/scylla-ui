@@ -6,18 +6,13 @@ export class FileSharingService {
   private _xes: string;
   private _json: string;
 
-  // stores data in Base64 encoding
+  // stores data as Data-URL encoding
   set(fileFormat: string, fileSrc: string) {
-    this['_' + fileFormat] = this.cutFileEncoding(fileSrc);
+    this['_' + fileFormat] = fileSrc;
   }
 
   get(fileFormat: string) {
     return this['_' + fileFormat];
-  }
-
-  cutFileEncoding(fileSrc: string) {
-    const splitString = fileSrc.split(',');
-    return splitString[1];
   }
 
 }
