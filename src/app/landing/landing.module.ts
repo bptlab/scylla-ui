@@ -16,6 +16,7 @@ import { FooterBarComponent } from './menu/footer-bar/footer-bar.component';
 import { LandingComponent } from './landing.component';
 import { FileReaderComponent } from './file-selection/file-reader/file-reader.component';
 import { ProcessStatisticsService } from '../services/statistics/process-statistics.service';
+import {FileSharingService} from '../services/file-sharing/file-sharing.service';
 
 @NgModule({
   imports: [
@@ -33,6 +34,6 @@ import { ProcessStatisticsService } from '../services/statistics/process-statist
     RouterModule
   ],
   bootstrap: [LandingComponent],
-  providers: [ProcessStatisticsService]
+  providers: [FileSharingService, ProcessStatisticsService]
 })
 export class LandingModule { }

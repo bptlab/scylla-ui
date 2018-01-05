@@ -1,4 +1,5 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {FileSharingService} from '../../../services/file-sharing/file-sharing.service';
 
 @Component({
   selector: 'app-file-reader',
@@ -13,9 +14,8 @@ export class FileReaderComponent {
   loaded = false;
   fileLoaded = false;
   fileSrc = '';
-  fileType = 'blubber';
 
-  constructor() {
+  constructor(private service: FileSharingService) {
 
   }
   handleDragEnter() {
@@ -47,11 +47,13 @@ export class FileReaderComponent {
 
     reader.onload = this._handleReaderLoaded.bind(this);
     reader.readAsDataURL(file);
+
   }
 
   _handleReaderLoaded(e) {
     const reader = e.target;
     this.fileSrc = reader.result;
+    this.service.set(this.data, this.fileSrc);
     this.loaded = true;
   }
 
