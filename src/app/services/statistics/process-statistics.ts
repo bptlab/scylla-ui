@@ -27,8 +27,8 @@ declare namespace ProcessStatistics {
             waiting: number;
             off_timetable;
         };
-        resources: Resource[]; // TODO: Check if neccessary
-        activities: Activity[]; // TODO: Check if neccessary
+        resources?: Resource[]; // TODO: @Annika: Check if neccessary
+        activities?: Activity[]; // TODO: @Annika: Check if neccessary
     }
 
     export interface Resource {
