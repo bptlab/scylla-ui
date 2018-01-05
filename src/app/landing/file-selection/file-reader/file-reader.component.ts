@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {FileSharingService} from '../../../services/file-sharing/file-sharing.service';
 
 @Component({
@@ -12,8 +12,8 @@ export class FileReaderComponent {
 
   dragging = false;
   loaded = false;
-  fileLoaded = false;
   fileSrc = '';
+  displayedFileName: string;
 
   constructor(private service: FileSharingService) {
 
@@ -35,19 +35,23 @@ export class FileReaderComponent {
   handleInputChange(e) {
     const file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
 
-    const pattern = /-*.bpmn/;
+    const pattern = /-*/;
     const reader = new FileReader();
 
-    /*if (!file.type.match(pattern)) {
-      alert('invalid format');
-      return;
-    }*/
+ // TODO check if file has correct file extension
 
-    this.loaded = false;
+    if (file) {
+      if (!file.type.match(pattern)) {
+        alert('invalid format');
+        return;
+      }
 
-    reader.onload = this._handleReaderLoaded.bind(this);
-    reader.readAsDataURL(file);
+      this.loaded = false;
 
+      reader.onload = this._handleReaderLoaded.bind(this);
+      reader.readAsDataURL(file);
+      this.displayedFileName = file.name;
+    }
   }
 
   _handleReaderLoaded(e) {
