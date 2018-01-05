@@ -8,10 +8,8 @@ import {FileReaderComponent} from './file-reader/file-reader.component';
 })
 export class FileSelectionComponent {
 
-  private bpmn = 'bpmn';
-
   constructor() {
-    console.log(this.bpmn);
+
   }
 
 
