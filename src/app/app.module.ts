@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './misc/not-found/not-found.component';
 import { LandingComponent } from './landing/landing.component';
+import { FileSharingService } from './services/file-sharing/file-sharing.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { LandingComponent } from './landing/landing.component';
     StatisticsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FileSharingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

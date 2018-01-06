@@ -5,6 +5,7 @@ import { BpmnViewerComponent } from './bpmn-viewer/bpmn-viewer.component';
 import { StatisticsRoutingModule } from './statistics-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuModule } from '../menu/menu.module';
+import { FilesSelectedGuard } from '../guards/files-selected.guard';
 
 @NgModule({
   imports: [
@@ -12,6 +13,9 @@ import { MenuModule } from '../menu/menu.module';
     CommonModule,
     StatisticsRoutingModule
   ],
-  declarations: [StatisticsComponent, BpmnViewerComponent, DashboardComponent]
+  declarations: [StatisticsComponent, BpmnViewerComponent, DashboardComponent],
+  providers: [
+    FilesSelectedGuard
+  ]
 })
 export class StatisticsModule { }

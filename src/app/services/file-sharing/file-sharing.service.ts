@@ -8,7 +8,7 @@ export class FileSharingService {
 
   // stores data in Base64 encoding
   set(fileFormat: string, fileSrc: string) {
-    this['_' + fileFormat] = this.cutFileEncoding(fileSrc);
+    this['_' + fileFormat] = fileSrc;
   }
 
   get(fileFormat: string) {
