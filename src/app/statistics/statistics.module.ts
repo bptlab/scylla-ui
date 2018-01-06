@@ -6,12 +6,20 @@ import { StatisticsRoutingModule } from './statistics-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuModule } from '../menu/menu.module';
 import { FilesSelectedGuard } from '../guards/files-selected.guard';
+import { MatSidenavModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   imports: [
     MenuModule,
     CommonModule,
-    StatisticsRoutingModule
+    StatisticsRoutingModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatMenuModule
   ],
   declarations: [StatisticsComponent, BpmnViewerComponent, DashboardComponent],
   providers: [

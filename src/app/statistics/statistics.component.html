@@ -1,2 +1,32 @@
-<router-outlet></router-outlet>
-<app-footer-bar></app-footer-bar>
+<body>
+    <div class="page-wrap">
+        <main class="content">
+          <mat-drawer-container class="example-container">
+              <mat-drawer id="left_menu" mode="side" opened="true">
+                <div>
+                  <a routerLink="/statistics/dashboard">
+                    <mat-icon>dashboard</mat-icon>
+                  </a>
+                </div>
+                <div>
+                  <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                </div>
+              </mat-drawer>
+              <mat-drawer-content>
+                      <router-outlet></router-outlet>
+              </mat-drawer-content>
+          </mat-drawer-container>
+        </main>
+        <footer>
+            <app-footer-bar></app-footer-bar>
+        </footer>
+    </div>
+</body>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>attachment</mat-icon>
+      <span>Select other files</span>
+    </button>
+</mat-menu>
