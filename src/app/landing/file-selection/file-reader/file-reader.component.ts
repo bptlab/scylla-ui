@@ -49,7 +49,7 @@ export class FileReaderComponent {
       this.loaded = false;
 
       reader.onload = this._handleReaderLoaded.bind(this);
-      reader.readAsDataURL(file);
+      reader.readAsText(file);
       this.displayedFileName = file.name;
     }
   }
