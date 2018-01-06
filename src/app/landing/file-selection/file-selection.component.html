@@ -1,9 +1,15 @@
-<mat-card>
-  <mat-card-title>Choose your Scylla output</mat-card-title>
-  <mat-card-content>
-    <app-file-reader data="bpmn"></app-file-reader>
-    <app-file-reader data="xes"></app-file-reader>
-    <app-file-reader data="json"></app-file-reader>
-  </mat-card-content>
-</mat-card>
-
+<div class="main-div">
+  <mat-card style="margin: 16px; width: 500px;">
+    <mat-card-title>Select your files</mat-card-title>
+    <mat-card-subtitle>That is the output of Scylla</mat-card-subtitle>
+    <mat-card-content>
+      <app-file-reader data="bpmn"></app-file-reader>
+      <app-file-reader data="xes"></app-file-reader>
+      <app-file-reader data="json"></app-file-reader>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Auswerten</button>
+      <button mat-button>Abbrechen</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
