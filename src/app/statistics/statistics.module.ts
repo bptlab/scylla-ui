@@ -10,6 +10,7 @@ import { MatSidenavModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
+import { MatCardModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {MatMenuModule} from '@angular/material/menu';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule
   ],
   declarations: [StatisticsComponent, BpmnViewerComponent, DashboardComponent],
   providers: [
