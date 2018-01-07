@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FileSharingService } from '../../services/file-sharing/file-sharing.service';
 
 import 'bpmn-js';
+import 'bpmn-js/lib/NavigatedViewer';
 
-const bpmnViewer = require('bpmn-js');
+const bpmnViewer = require('bpmn-js/lib/NavigatedViewer');
 
 @Component({
   selector: 'app-bpmn-viewer',
