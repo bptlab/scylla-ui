@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderBarComponent } from './header-bar.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('HeaderBarComponent', () => {
   let component: HeaderBarComponent;
@@ -8,7 +9,8 @@ describe('HeaderBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderBarComponent ]
+      declarations: [ HeaderBarComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
