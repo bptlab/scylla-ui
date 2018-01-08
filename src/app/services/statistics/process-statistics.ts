@@ -1,4 +1,10 @@
 declare namespace ProcessStatistics {
+
+    export interface ResourceUtilization {
+        config: Configuration;
+        processes: Process [];
+    }
+
     export interface Configuration {
         time_unit: string;
     }
@@ -25,7 +31,7 @@ declare namespace ProcessStatistics {
             flow_time: number;
             effective: number;
             waiting: number;
-            off_timetable;
+            off_timetable: number;
         };
         resources?: Resource[]; // TODO: @Annika: Check if neccessary
         activities?: Activity[]; // TODO: @Annika: Check if neccessary
