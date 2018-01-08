@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FileReaderComponent } from './file-reader.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('FileReaderComponent', () => {
   let component: FileReaderComponent;
@@ -8,7 +9,8 @@ describe('FileReaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FileReaderComponent ]
+      declarations: [ FileReaderComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));

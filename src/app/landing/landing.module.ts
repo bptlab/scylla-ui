@@ -11,15 +11,15 @@ import { Router, RouterModule } from '@angular/router';
 import { LandingRoutingModule } from './landing-routing.module';
 
 import { FileSelectionComponent } from './file-selection/file-selection.component';
-import { HeaderBarComponent } from './menu/header-bar/header-bar.component';
-import { FooterBarComponent } from './menu/footer-bar/footer-bar.component';
 import { LandingComponent } from './landing.component';
 import { FileReaderComponent } from './file-selection/file-reader/file-reader.component';
 import { ProcessStatisticsService } from '../services/statistics/process-statistics.service';
 import {FileSharingService} from '../services/file-sharing/file-sharing.service';
+import { MenuModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
+    MenuModule,
     LandingRoutingModule,
     CommonModule,
     BrowserModule,
@@ -28,7 +28,7 @@ import {FileSharingService} from '../services/file-sharing/file-sharing.service'
     MatIconModule,
     MatCardModule
   ],
-  declarations: [FileSelectionComponent, HeaderBarComponent, FooterBarComponent, LandingComponent, FileReaderComponent],
+  declarations: [FileSelectionComponent, LandingComponent, FileReaderComponent],
   exports: [
     LandingComponent,
     RouterModule

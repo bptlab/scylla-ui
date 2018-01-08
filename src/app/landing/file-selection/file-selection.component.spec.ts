@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FileSelectionComponent } from './file-selection.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('FileSelectionComponent', () => {
   let component: FileSelectionComponent;
@@ -8,7 +9,8 @@ describe('FileSelectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FileSelectionComponent ]
+      declarations: [ FileSelectionComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
