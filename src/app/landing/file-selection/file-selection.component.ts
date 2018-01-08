@@ -11,7 +11,4 @@ export class FileSelectionComponent {
   constructor() {
 
   }
-
-
-
 }
