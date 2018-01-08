@@ -5,7 +5,6 @@ import {FileSharingService} from '../../../services/file-sharing/file-sharing.se
   selector: 'app-file-reader',
   templateUrl: './file-reader.component.html',
   styleUrls: ['./file-reader.component.css'],
-  providers: [FileSharingService],
 })
 export class FileReaderComponent {
 
