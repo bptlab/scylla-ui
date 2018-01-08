@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BpmnViewerComponent } from './bpmn-viewer.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('BpmnViewerComponent', () => {
   let component: BpmnViewerComponent;
@@ -8,7 +9,8 @@ describe('BpmnViewerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BpmnViewerComponent ]
+      declarations: [ BpmnViewerComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
