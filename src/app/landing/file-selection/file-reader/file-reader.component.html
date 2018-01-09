@@ -2,7 +2,6 @@
          (change)="handleInputChange($event)" class="inputfile">
   <label [for]="data" ondragover="return false;"
          [class.loaded]="loaded"
-         [style.outlineColor]="dragging ? activeColor : baseColor"
          (dragenter)="handleDragEnter()"
          (dragleave)="handleDragLeave()"
          (drop)="handleDrop($event)">
