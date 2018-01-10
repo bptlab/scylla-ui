@@ -18,17 +18,17 @@ export class BoxPlotDiagramComponent implements OnInit {
     this.basicChart();
   }
   basicChart() {
-    const y1 = [this.min, this.max, this.median, this.q1, this.q3];
+    const y1 = [this.min, this.max, this.median, this.median, this.q1, this.q3];
 
     const trace1 = {
       y: y1,
       type: 'box'
     };
 
-    const data = [trace1];
+    const data = [trace1]; // TODO check how to name trace
 
     const layout = {
-      title: 'Box Plot Styling Outliers'
+      title: 'Box Plot Styling Outliers' // TODO make title input
     };
 
     Plotly.newPlot('chart', data, layout);
