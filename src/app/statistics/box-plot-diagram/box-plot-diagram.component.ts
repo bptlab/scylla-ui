@@ -18,11 +18,10 @@ export class BoxPlotDiagramComponent implements OnInit {
     this.basicChart();
   }
   basicChart() {
-    const y2 = [this.min, this.max, this.median, this.q1, this.q3];
-    const y0: number[] = [];
+    const y1 = [this.min, this.max, this.median, this.q1, this.q3];
 
     const trace1 = {
-      y: y2,
+      y: y1,
       type: 'box'
     };
 
