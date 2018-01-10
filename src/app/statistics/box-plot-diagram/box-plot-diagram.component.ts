@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-box-plot-diagram',
@@ -7,31 +7,32 @@ import {Component, OnInit} from '@angular/core';
 })
 export class BoxPlotDiagramComponent implements OnInit {
 
+  @Input() min: number;
+  @Input() max: number;
+  @Input() median: number;
+  @Input() q1: number;
+  @Input() q3: number;
+
   constructor() { }
   ngOnInit() {
     this.basicChart();
   }
   basicChart() {
+    const y2 = [this.min, this.max, this.median, this.q1, this.q3];
     const y0: number[] = [];
-    const y1: number[] = [];
-    for (let i = 0; i < 50; i ++) {
-      y0[i] = Math.random();
-      y1[i] = Math.random() + 1;
-    }
 
     const trace1 = {
-      y: y0,
+      y: y2,
       type: 'box'
     };
 
-    const trace2 = {
-      y: y1,
-      type: 'box'
+    const data = [trace1];
+
+    const layout = {
+      title: 'Box Plot Styling Outliers'
     };
 
-    const data = [trace1, trace2];
-
-    Plotly.newPlot('chart', data);
+    Plotly.newPlot('chart', data, layout);
   }
 
 }
