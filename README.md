@@ -1,4 +1,4 @@
-# ScyllaUi [![Build Status](https://travis-ci.org/bptlab/scylla-ui.svg?branch=master)](https://travis-ci.org/bptlab/scylla-ui)[![Maintainability](https://api.codeclimate.com/v1/badges/ac0e1f812c5430707d24/maintainability)](https://codeclimate.com/repos/5a365e5c6eb72e029c000a97/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/ac0e1f812c5430707d24/test_coverage)](https://codeclimate.com/repos/5a365e5c6eb72e029c000a97/test_coverage)
+# ScyllaUi [![Build Status](https://travis-ci.org/bptlab/scylla-ui.svg?branch=master)](https://travis-ci.org/bptlab/scylla-ui)[![Maintainability](https://api.codeclimate.com/v1/badges/0ae17f1eb85a228f53dd/maintainability)](https://codeclimate.com/github/bptlab/scylla-ui/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/0ae17f1eb85a228f53dd/test_coverage)](https://codeclimate.com/github/bptlab/scylla-ui/test_coverage)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
