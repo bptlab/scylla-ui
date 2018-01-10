@@ -3,10 +3,16 @@ dist: trusty
 language: node_js
 node_js: stable
 
+env:
+  global:
+    - CC_TEST_REPORTER_ID=787a2f89b15c637323c7340d65ec17e898ac44480706b4b4122ea040c2a88f1d
+
 git:
   depth: 3
   lfs_skip_smudge: true
 
+notifications: 
+  email: false
 
 cache:
   directories: node_modules
@@ -25,6 +31,9 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 before_script:
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- ./cc-test-reporter before-build
 #- npm install -g codecov
 #- npm install coveralls
 - npm install -g angular-cli
@@ -38,7 +47,7 @@ before_script:
 script: 
 #- codecov
 #- cat ./coverage/coverage.lcov | ./node_modules/coveralls/bin/coveralls.js
-- ng test --watch=false
+- ng test --code-coverage --watch=false
 
-notifications: 
-  email: false
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
