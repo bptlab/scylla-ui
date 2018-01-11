@@ -26,7 +26,7 @@ export class BoxPlotDiagramComponent implements OnInit {
       type: 'box',
       name: this.label,
       boxpoints: false,
-      marker:{
+      marker: {
         size: 2,
         color: 'rgb(95,64,176)'
       },
