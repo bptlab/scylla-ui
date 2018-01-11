@@ -6,7 +6,6 @@ node_js: stable
 env:
   global:
     - CC_TEST_REPORTER_ID=2271c34d4b24dab2d2867860133a62654442f637117c09195c7f6bb349073033
-    - CODECLIMATE_REPO_TOKEN=2271c34d4b24dab2d2867860133a62654442f637117c09195c7f6bb349073033
 
 git:
   depth: 3
@@ -25,8 +24,6 @@ addons:
     packages:
       - google-chrome-stable
       - google-chrome-beta
-  codeclimate:
-    repo_token: 2271c34d4b24dab2d2867860133a62654442f637117c09195c7f6bb349073033
 
 before_install:
   - export CHROME_BIN=chromium-browser
@@ -35,20 +32,24 @@ before_install:
 
 install: 
   - npm install
-  - npm install codeclimate-test-reporter
   - npm install -g angular-cli
   - npm install -g karma
 
 before_script:
+  # Install code climate test reporter to submit test coverage to codeclimate
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
   #- npm install -g codecov
   #- npm install coveralls
   - ng lint
   - ng build --aot --prod
   - ng serve & ng e2e
+  
 
 script:
 - ng test --code-coverage --watch=false
 
 after_script:
   - "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
-  - codeclimate-test-reporter < coverage/lcov.info
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
