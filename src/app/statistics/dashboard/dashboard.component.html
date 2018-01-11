@@ -1,3 +1,5 @@
 <!--<app-process-overview></app-process-overview>-->
 <app-bpmn-viewer></app-bpmn-viewer>
-<app-box-plot-diagram [min]="1" [max]="10" [median]="5" [q1]="3" [q3]="7" [label]="'flowtime'"></app-box-plot-diagram>
+<div class="boxplot">
+  <app-box-plot-diagram [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'flowtime'"></app-box-plot-diagram>
+</div>

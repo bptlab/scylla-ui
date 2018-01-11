@@ -26,11 +26,23 @@ export class BoxPlotDiagramComponent implements OnInit {
       type: 'box',
       name: this.label,
       boxpoints: false,
+      marker:{
+        size: 2,
+        color: 'rgb(95,64,176)'
+      },
+      line: {
+        width: 1
+      }
+    };
+
+    const layout = {
+      title: this.label,
+      showlegend: false,
     };
 
     const data = [trace1];
 
-    Plotly.newPlot('chart', data);
+    Plotly.newPlot('boxplot', data, layout);
   }
 
 }
