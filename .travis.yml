@@ -18,12 +18,14 @@ cache:
   directories: node_modules
 
 addons:
-apt:
-  sources:
-    - google-chrome
-  packages:
-    - google-chrome-stable
-    - google-chrome-beta
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+      - google-chrome-beta
+  codeclimate:
+    repo_tohen: 2271c34d4b24dab2d2867860133a62654442f637117c09195c7f6bb349073033
 
 before_install:
   - export CHROME_BIN=chromium-browser
