@@ -12,6 +12,7 @@ export class BoxPlotDiagramComponent implements OnInit {
   @Input() median: number;
   @Input() q1: number;
   @Input() q3: number;
+  @Input() label: string;
 
   constructor() { }
   ngOnInit() {
@@ -22,16 +23,14 @@ export class BoxPlotDiagramComponent implements OnInit {
 
     const trace1 = {
       y: y1,
-      type: 'box'
+      type: 'box',
+      name: this.label,
+      boxpoints: false,
     };
 
-    const data = [trace1]; // TODO check how to name trace
+    const data = [trace1];
 
-    const layout = {
-      title: 'Box Plot Styling Outliers' // TODO make title input
-    };
-
-    Plotly.newPlot('chart', data, layout);
+    Plotly.newPlot('chart', data);
   }
 
 }
