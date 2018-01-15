@@ -1,11 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-box-plot-diagram',
   templateUrl: './box-plot-diagram.component.html',
   styleUrls: ['./box-plot-diagram.component.css']
 })
-export class BoxPlotDiagramComponent implements OnInit {
+export class BoxPlotDiagramComponent implements AfterViewInit {
 
   @Input() min: number;
   @Input() max: number;
@@ -15,9 +15,11 @@ export class BoxPlotDiagramComponent implements OnInit {
   @Input() label: string;
 
   constructor() { }
-  ngOnInit() {
+
+  ngAfterViewInit() {
     this.basicChart();
   }
+
   basicChart() {
     const y1 = [this.min, this.max, this.median, this.median, this.q1, this.q3];
 
@@ -42,7 +44,7 @@ export class BoxPlotDiagramComponent implements OnInit {
 
     const data = [trace1];
 
-    Plotly.newPlot('boxplot', data, layout);
+    Plotly.newPlot('chart_' + this.label, data, layout);
   }
 
 }
