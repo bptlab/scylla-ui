@@ -1,3 +1,7 @@
-<p>
-  kpi-summary works!
-</p>
+<div fxLayout="row" fxLayoutAlign="space-evenly center">
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Costs'"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Flow Time'"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Waiting Time'"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Effective Time'"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Off-timetable Time'"></app-box-plot-diagram>
+</div>

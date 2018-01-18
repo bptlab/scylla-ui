@@ -13,6 +13,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { MatCardModule } from '@angular/material';
 import { BoxPlotDiagramComponent } from './box-plot-diagram/box-plot-diagram.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {KpiSummaryComponent} from './kpi-summary/kpi-summary.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatCardModule,
     FlexLayoutModule
   ],
-  declarations: [StatisticsComponent, BpmnViewerComponent, DashboardComponent, BoxPlotDiagramComponent],
+  declarations: [StatisticsComponent, BpmnViewerComponent, DashboardComponent, BoxPlotDiagramComponent, KpiSummaryComponent],
   providers: [
     FilesSelectedGuard
   ]
