@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatCardModule } from '@angular/material';
+import { BoxPlotDiagramComponent } from './box-plot-diagram/box-plot-diagram.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,7 @@ import { MatCardModule } from '@angular/material';
     MatMenuModule,
     MatCardModule
   ],
-  declarations: [StatisticsComponent, BpmnViewerComponent, DashboardComponent],
+  declarations: [StatisticsComponent, BpmnViewerComponent, DashboardComponent, BoxPlotDiagramComponent],
   providers: [
     FilesSelectedGuard
   ]
