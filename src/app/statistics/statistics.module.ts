@@ -12,6 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatCardModule } from '@angular/material';
 import { BoxPlotDiagramComponent } from './box-plot-diagram/box-plot-diagram.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { BoxPlotDiagramComponent } from './box-plot-diagram/box-plot-diagram.com
     MatSidenavModule,
     MatIconModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule
   ],
   declarations: [StatisticsComponent, BpmnViewerComponent, DashboardComponent, BoxPlotDiagramComponent],
   providers: [

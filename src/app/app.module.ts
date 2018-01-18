@@ -6,14 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './misc/not-found/not-found.component';
-import { LandingComponent } from './landing/landing.component';
 import { FileSharingService } from './services/file-sharing/file-sharing.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

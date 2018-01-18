@@ -1,4 +1,10 @@
+.mat-card {
+  margin: 10px;
+
+}
+
 .boxplot {
   width:300px;
+  height: 500px;
   display: inline-block;
 }
