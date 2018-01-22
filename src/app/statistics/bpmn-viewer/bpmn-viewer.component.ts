@@ -22,7 +22,7 @@ export class BpmnViewerComponent implements OnInit {
   constructor(private fileService: FileSharingService) { }
 
   loadBPMN() {
-    const xml = this.fileService.get('bpmn'); // my BPMN 2.0 xml
+    const xml = this.fileService.getData('bpmn'); // my BPMN 2.0 xml
 
     this.viewer.importXML(xml, (err: any) => {
       if (err) {
