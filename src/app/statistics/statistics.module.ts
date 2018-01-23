@@ -8,12 +8,13 @@ import { MenuModule } from '../menu/menu.module';
 import { FilesSelectedGuard } from '../guards/files-selected.guard';
 import { MatSidenavModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material';
 import { BoxPlotDiagramComponent } from './box-plot-diagram/box-plot-diagram.component';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {KpiSummaryComponent} from './kpi-summary/kpi-summary.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { KpiSummaryComponent } from './kpi-summary/kpi-summary.component';
+import { RessourcesComponent } from './ressources/ressources.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,13 @@ import {KpiSummaryComponent} from './kpi-summary/kpi-summary.component';
     MatCardModule,
     FlexLayoutModule
   ],
-  declarations: [StatisticsComponent, BpmnViewerComponent, DashboardComponent, BoxPlotDiagramComponent, KpiSummaryComponent],
+  declarations: [
+    StatisticsComponent,
+    BpmnViewerComponent,
+    DashboardComponent,
+    BoxPlotDiagramComponent,
+    KpiSummaryComponent,
+    RessourcesComponent],
   providers: [
     FilesSelectedGuard
   ]
