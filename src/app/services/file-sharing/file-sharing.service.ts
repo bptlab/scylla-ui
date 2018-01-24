@@ -7,12 +7,13 @@ export class FileSharingService {
   private _xes: File;
   private _xml: File;
 
+  private parseString = require('xml2js').parseString;
+
   setSource(fileFormat: string, fileSrc: string) {
     if (!this['_' + fileFormat]) {
       this['_' + fileFormat] = new File;
     }
     this['_' + fileFormat].data = fileSrc;
-
   }
 
   setName(fileFormat: string, fileName: string) {
@@ -39,6 +40,12 @@ export class FileSharingService {
       return null;
     }
     return this['_' + fileFormat].data;
+  }
+
+  getXmlDataAsJson() {
+    return this.parseString(this.getData('xml'), function (err, result) {
+      console.dir(result);
+    });
   }
 
 }
