@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RessourcesSummaryComponent } from './ressources-summary.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('RessourcesSummaryComponent', () => {
   let component: RessourcesSummaryComponent;
@@ -8,7 +9,8 @@ describe('RessourcesSummaryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RessourcesSummaryComponent ]
+      declarations: [ RessourcesSummaryComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
