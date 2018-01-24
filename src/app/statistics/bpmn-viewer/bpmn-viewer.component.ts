@@ -30,8 +30,32 @@ export class BpmnViewerComponent implements OnInit {
       } else {
         const canvas = this.viewer.get('canvas');
         canvas.zoom('fit-viewport');
+
+        // hover and click events
+        const eventBus = this.viewer.get('eventBus');
+        const events = [
+          'element.hover',
+          'element.click',
+        ];
+        events.forEach(function(event) {
+          eventBus.on(event, function(e) {
+
+            // e.element = the model element
+            // e.gfx = the graphical element
+
+            console.log(event, 'on', e.element.id);
+          });
+        });
       }
     });
+
+
   }
+
+  eventClicked() {
+
+  }
+
+
 
 }
