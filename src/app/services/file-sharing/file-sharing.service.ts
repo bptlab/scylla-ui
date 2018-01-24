@@ -5,7 +5,7 @@ import {File} from './File';
 export class FileSharingService {
   private _bpmn: File;
   private _xes: File;
-  private _json: File;
+  private _xml: File;
 
   setSource(fileFormat: string, fileSrc: string) {
     if (!this['_' + fileFormat]) {
