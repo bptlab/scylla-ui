@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import {FileSharingService} from '../../../services/file-sharing/file-sharing.service';
 
 @Component({
@@ -6,7 +6,7 @@ import {FileSharingService} from '../../../services/file-sharing/file-sharing.se
   templateUrl: './file-reader.component.html',
   styleUrls: ['./file-reader.component.css'],
 })
-export class FileReaderComponent {
+export class FileReaderComponent implements OnInit {
 
  @Input() data: string;
 
@@ -17,7 +17,16 @@ export class FileReaderComponent {
 
   constructor(private service: FileSharingService) {
 
+
   }
+
+  ngOnInit() {
+    if (this.service.getData(this.data)) {
+      this.loaded = true;
+      this.displayedFileName = this.service.getName(this.data);
+    }
+  }
+
   handleDragEnter() {
     this.dragging = true;
   }
@@ -51,13 +60,14 @@ export class FileReaderComponent {
       reader.onload = this._handleReaderLoaded.bind(this);
       reader.readAsText(file);
       this.displayedFileName = file.name;
+      this.service.setName(this.data, file.name);
     }
   }
 
   _handleReaderLoaded(e) {
     const reader = e.target;
     this.fileSrc = reader.result;
-    this.service.set(this.data, this.fileSrc);
+    this.service.setSource(this.data, reader.result);
     this.loaded = true;
   }
 

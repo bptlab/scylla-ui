@@ -1,17 +1,44 @@
 import { Injectable } from '@angular/core';
+import {File} from './File';
 
 @Injectable()
 export class FileSharingService {
-  private _bpmn: string;
-  private _xes: string;
-  private _json: string;
+  private _bpmn: File;
+  private _xes: File;
+  private _json: File;
 
-  set(fileFormat: string, fileSrc: string) {
-    this['_' + fileFormat] = fileSrc;
+  setSource(fileFormat: string, fileSrc: string) {
+    if (!this['_' + fileFormat]) {
+      this['_' + fileFormat] = new File;
+    }
+    this['_' + fileFormat].data = fileSrc;
+
+  }
+
+  setName(fileFormat: string, fileName: string) {
+    if (!this['_' + fileFormat]) {
+      this['_' + fileFormat] = new File;
+    }
+    this['_' + fileFormat].name = fileName;
   }
 
   get(fileFormat: string) {
+    if (!this['_' + fileFormat]) {
+      return null;
+    }
     return this['_' + fileFormat];
+  }
+  getName(fileFormat: string) {
+    if (!this['_' + fileFormat]) {
+      return null;
+    }
+    return this['_' + fileFormat].name;
+  }
+  getData(fileFormat: string) {
+    if (!this['_' + fileFormat]) {
+      return null;
+    }
+    return this['_' + fileFormat].data;
   }
 
 }
