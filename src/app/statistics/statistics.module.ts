@@ -15,6 +15,7 @@ import { BoxPlotDiagramComponent } from './box-plot-diagram/box-plot-diagram.com
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { KpiSummaryComponent } from './kpi-summary/kpi-summary.component';
 import { RessourcesComponent } from './ressources/ressources.component';
+import { RessourcesSummaryComponent } from './ressources-summary/ressources-summary.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { RessourcesComponent } from './ressources/ressources.component';
     DashboardComponent,
     BoxPlotDiagramComponent,
     KpiSummaryComponent,
-    RessourcesComponent],
+    RessourcesComponent,
+    RessourcesSummaryComponent],
   providers: [
     FilesSelectedGuard
   ]
