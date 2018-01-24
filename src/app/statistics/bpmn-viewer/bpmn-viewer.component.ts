@@ -28,10 +28,14 @@ export class BpmnViewerComponent implements OnInit {
       if (err) {
         console.log('error rendering', err);
       } else {
-        const canvas = this.viewer.get('canvas');
-        canvas.zoom('fit-viewport');
+        this.centerModel();
       }
     });
+  }
+
+  centerModel() {
+    const canvas = this.viewer.get('canvas');
+    canvas.zoom('fit-viewport');
   }
 
 }
