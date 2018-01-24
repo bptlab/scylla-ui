@@ -1,7 +1,7 @@
 declare namespace ProcessStatistics {
 
     export interface ResourceUtilization {
-        config: Configuration;
+        configuration: Configuration;
         processes: Process [];
     }
 
@@ -11,7 +11,7 @@ declare namespace ProcessStatistics {
 
     export interface Process {
         id: string;
-        name: string;
+        // name: string; not yet available
         cost: Statistics;
         time: {
             flow_time: Statistics;
@@ -20,21 +20,21 @@ declare namespace ProcessStatistics {
             off_timetable: Statistics;
         };
         instances: ProcessInstance[];
-        resources: Resource[];
         activities: Activity[];
+        resources: Resource[];
     }
 
     export interface ProcessInstance {
-        id: number;
-        cost: number;
+        // id: number; not yet available
+        costs: number; // TODO: fix when #33 is done
         time: {
-            flow_time: number;
+            duration: number; // TODO: fix when #33 is done
             effective: number;
             waiting: number;
-            off_timetable: number;
+            offTime: number; // TODO: fix when #33 is done
         };
-        resources?: Resource[]; // TODO: @Annika: Check if neccessary
-        activities?: Activity[]; // TODO: @Annika: Check if neccessary
+        // resources?: Resource[];
+        // activities?: Activity[];
     }
 
     export interface Resource {
@@ -49,12 +49,12 @@ declare namespace ProcessStatistics {
 
     export interface ResourceInstance {
         id: string;
-        name: string;
+        // name: string; not yet available
+        cost: number;
         time: {
             in_use: number;
             available: number;
         };
-        cost: number;
     }
 
     export interface Activity {
@@ -64,6 +64,7 @@ declare namespace ProcessStatistics {
         time: {
             duration: Statistics;
             waiting: Statistics;
+            resources_idle: Statistics;
         };
         instances: ActivityInstance[];
     }
@@ -73,16 +74,17 @@ declare namespace ProcessStatistics {
         time: {
             waiting: number;
             duration: number;
+            resources_idle: number;
         };
     }
 
     export interface Statistics {
-        min?: number;
-        max?: number;
-        median?: number;
-        avg?: number;
-        Q1?: number;
-        Q3?: number;
-        total?: number;
+        min: number;
+        max: number;
+        median: number;
+        avg: number;
+        Q1: number;
+        Q3: number;
+        total: number;
     }
 }
