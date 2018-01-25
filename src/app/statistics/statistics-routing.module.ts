@@ -5,6 +5,7 @@ import { StatisticsComponent } from './statistics.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FilesSelectedGuard } from '../guards/files-selected.guard';
 import {RessourcesComponent} from './ressources/ressources.component';
+import {ActivityComponent} from './activity/activity.component';
 
 export const ROUTES = [
   {
@@ -13,7 +14,8 @@ export const ROUTES = [
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'ressources', component: RessourcesComponent }
+      { path: 'ressources', component: RessourcesComponent },
+      { path: 'activities', component: ActivityComponent }
     ],
     canActivate: [ FilesSelectedGuard ]
   }
