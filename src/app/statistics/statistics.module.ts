@@ -19,6 +19,7 @@ import { RessourcesSummaryComponent } from './ressources-summary/ressources-summ
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import {ActivitiesComponent} from './activities/activities.component';
 import {ActivityComponent} from './activity/activity.component';
+import { ActivitySummaryComponent } from './activity-summary/activity-summary.component';
 
 @NgModule({
   imports: [
@@ -42,7 +43,8 @@ import {ActivityComponent} from './activity/activity.component';
     RessourcesSummaryComponent,
     PieChartComponent,
     ActivitiesComponent,
-  ActivityComponent],
+  ActivityComponent,
+  ActivitySummaryComponent],
   providers: [
     FilesSelectedGuard
   ]

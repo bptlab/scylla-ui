@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import {FileSharingService} from '../../services/file-sharing/file-sharing.service';
 import Activity = ProcessStatistics.Activity;
-import {File} from '../../services/file-sharing/File';
 
 @Component({
   selector: 'app-activity',

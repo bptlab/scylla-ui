@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Activity = ProcessStatistics.Activity;
 
 @Component({
   selector: 'app-activities',
@@ -7,7 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivitiesComponent implements OnInit {
 
-  constructor() { }
+
+  // TODO remove once we have actual data
+  activities: any[];
+  constructor() {
+    this.activities = [
+      {
+        id: 'hol',
+    name: 'test1' },
+      {
+        id: 'hol',
+        name: 'test2' },
+
+    ];
+  }
 
   ngOnInit() {
   }

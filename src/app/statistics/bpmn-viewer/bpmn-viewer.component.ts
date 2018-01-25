@@ -35,23 +35,14 @@ export class BpmnViewerComponent implements OnInit {
         // click events
         const eventBus = this.viewer.get('eventBus');
         eventBus.on('element.click', task => {
-          // debugger;
-          this.test(task);
+          this.navigateToTask(task);
         });
-        /*events.forEach(event => {
-          eventBus.on(event, task => {
-
-            // e.element = the model element
-            // e.gfx = the graphical element
-            console.log(event, 'on', task.element.id);
-          });
-        });*/
       }
     });
 
   }
 
-test(task) {
+  navigateToTask(task) {
     if (task.element.type === 'bpmn:Task') {
       this.router.navigate(['/statistics/activities/' + task.element.id]);
       console.log(task.element.id);
