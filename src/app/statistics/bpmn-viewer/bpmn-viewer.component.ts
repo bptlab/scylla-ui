@@ -42,7 +42,6 @@ export class BpmnViewerComponent implements OnInit {
 
             // e.element = the model element
             // e.gfx = the graphical element
-this.test();
             console.log(event, 'on', task.element.id);
           });
         });*/

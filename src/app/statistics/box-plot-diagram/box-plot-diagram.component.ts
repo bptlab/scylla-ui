@@ -34,17 +34,18 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
       },
       line: {
         width: 1
-      }
+      },
     };
 
     const layout = {
       title: this.label,
       showlegend: false,
+
     };
 
     const data = [trace1];
 
-    Plotly.newPlot('chart_' + this.label, data, layout);
+    Plotly.newPlot('chart_' + this.label, data, layout, {displayModeBar: false});
   }
 
 }

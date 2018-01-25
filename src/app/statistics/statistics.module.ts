@@ -16,6 +16,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { KpiSummaryComponent } from './kpi-summary/kpi-summary.component';
 import { RessourcesComponent } from './ressources/ressources.component';
 import { RessourcesSummaryComponent } from './ressources-summary/ressources-summary.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { RessourcesSummaryComponent } from './ressources-summary/ressources-summ
     BoxPlotDiagramComponent,
     KpiSummaryComponent,
     RessourcesComponent,
-    RessourcesSummaryComponent],
+    RessourcesSummaryComponent,
+    PieChartComponent],
   providers: [
     FilesSelectedGuard
   ]
