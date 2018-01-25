@@ -17,13 +17,13 @@ import { KpiSummaryComponent } from './kpi-summary/kpi-summary.component';
 import { RessourcesComponent } from './ressources/ressources.component';
 import { RessourcesSummaryComponent } from './ressources-summary/ressources-summary.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
-import { ActivitiesModule } from './activities/activities.module';
+import {ActivitiesComponent} from './activities/activities.component';
+import {ActivityComponent} from './activity/activity.component';
 
 @NgModule({
   imports: [
     MenuModule,
     CommonModule,
-    ActivitiesModule,
     StatisticsRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
@@ -40,7 +40,9 @@ import { ActivitiesModule } from './activities/activities.module';
     KpiSummaryComponent,
     RessourcesComponent,
     RessourcesSummaryComponent,
-    PieChartComponent],
+    PieChartComponent,
+    ActivitiesComponent,
+  ActivityComponent],
   providers: [
     FilesSelectedGuard
   ]
