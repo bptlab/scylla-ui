@@ -47,6 +47,11 @@ export class BpmnViewerComponent implements OnInit {
       this.router.navigate(['/statistics/activities/' + task.element.id]);
       console.log(task.element.id);
     }
-}
+
+  }
+
+  colorTask(taskID) {
+    // TODO implement
+  }
 
 }

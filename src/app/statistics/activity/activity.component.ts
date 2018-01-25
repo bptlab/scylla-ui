@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import Activity = ProcessStatistics.Activity;
 
@@ -7,7 +7,9 @@ import Activity = ProcessStatistics.Activity;
   templateUrl: './activity.component.html',
   styleUrls: ['./activity.component.css']
 })
-export class ActivityComponent implements OnInit {
+export class ActivityComponent implements OnInit, AfterViewInit {
+@ViewChild('bpmnViewer') bpmnViewer;
+
 
   activity: Activity;
 
@@ -19,6 +21,10 @@ export class ActivityComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.activity = params['activity_id'];
     });
+  }
+
+  ngAfterViewInit() {
+    this.bpmnViewer.colorTask(this.activity);
   }
 
 }
