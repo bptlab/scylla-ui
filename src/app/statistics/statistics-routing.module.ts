@@ -15,7 +15,7 @@ export const ROUTES = [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'ressources', component: RessourcesComponent },
-      { path: 'activities', component: ActivityComponent }
+      { path: 'activities', redirectTo: '/activity', pathMatch: 'full' }
     ],
     canActivate: [ FilesSelectedGuard ]
   }
