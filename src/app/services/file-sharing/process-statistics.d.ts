@@ -47,6 +47,7 @@ export interface Resource {
     time: {
         in_use: Statistics;
         available: Statistics;
+        workload: Statistics;
     };
     // instances: { [id: string]: {ResourceInstance} };
     instances: ResourceInstance[];

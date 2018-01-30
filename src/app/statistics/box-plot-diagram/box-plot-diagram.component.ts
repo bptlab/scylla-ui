@@ -29,11 +29,11 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
 
     const data = [trace1];
 
-    this.plot(this.label, data, layout);
+    this.plot(this.chartId, data, layout);
   }
 
-  private plot(label: string, data: any, layout: { title: string, showlegend: Boolean}) {
-    Plotly.newPlot('chart_' + label, data, layout, {displayModeBar: false});
+  private plot(chartId: string, data: any, layout: { showlegend: Boolean}) {
+    Plotly.newPlot('chart_' + chartId, data, layout, {displayModeBar: false});
   }
 
   private y1() {

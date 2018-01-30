@@ -1,7 +1,7 @@
 <mat-card>
-  <mat-card-title>{{activity}}</mat-card-title>
+  <mat-card-title>{{activity.name}}</mat-card-title>
   <mat-card-content>
-    <app-activity-summary [activityId]=" "></app-activity-summary>
+    <app-activity-summary [statistics]="activity"></app-activity-summary>
   </mat-card-content>
 </mat-card>
 <mat-card>

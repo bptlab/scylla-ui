@@ -327,7 +327,7 @@
             </instances>
             <activities>
                 <activity>
-                    <id>2</id>
+                    <id>Task_1suqugc</id>
                     <name>write paper</name>
                     <cost>
                         <min>0.0</min>
@@ -395,7 +395,7 @@
                     </instances>
                 </activity>
                 <activity>
-                    <id>3</id>
+                    <id>Task_0qt5qd2</id>
                     <name>write thesis</name>
                     <cost>
                         <min>0.0</min>
@@ -463,7 +463,7 @@
                     </instances>
                 </activity>
                 <activity>
-                    <id>4</id>
+                    <id>Task_0w9lsfx</id>
                     <name>be happy</name>
                     <cost>
                         <min>0.0</min>

@@ -18,7 +18,7 @@ export class PieChartComponent implements AfterViewInit {
 
   basicChart() {
     const data = [{
-      values: [19, 26],
+      values: [this.workload, 1 - this.workload],
       labels: ['In Use', 'Available'],
       marker: {
         colors: ['rgb(147,112,219)', 'rgb(211,211,211)'],

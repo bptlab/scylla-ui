@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { Activity } from '../../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-activity-summary',
@@ -6,8 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./activity-summary.component.css']
 })
 export class ActivitySummaryComponent implements OnInit {
-
-  @Input() activityId: string;
+  @Input() statistics: Activity;
 
   constructor() { }
 

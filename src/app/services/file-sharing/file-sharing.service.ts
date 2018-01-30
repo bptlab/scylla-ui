@@ -19,7 +19,10 @@ export class FileSharingService {
       this['_' + fileFormat] = new File;
     }
     this['_' + fileFormat].data = fileSrc;
-    this.loadResourceUtilization();
+
+    if (this['_xml']) {
+      this.loadResourceUtilization();
+    }
   }
 
   setName(fileFormat: string, fileName: string) {

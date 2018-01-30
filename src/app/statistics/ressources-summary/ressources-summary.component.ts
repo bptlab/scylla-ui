@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FileSharingService } from '../../services/file-sharing/file-sharing.service';
-import { ResourceUtilization } from '../../services/file-sharing/process-statistics';
+import { ResourceUtilization, Resource } from '../../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-ressources-summary',
@@ -8,13 +8,9 @@ import { ResourceUtilization } from '../../services/file-sharing/process-statist
   styleUrls: ['./ressources-summary.component.css']
 })
 export class RessourcesSummaryComponent implements OnInit {
-  public statistics: ResourceUtilization;
+  @Input() statistics: Resource;
 
-  @Input() ressourceId: string;
-
-  constructor(private service: FileSharingService) {
-    this.statistics = this.service.resourceUtil;
-  }
+  constructor() { }
 
   ngOnInit() {
   }
