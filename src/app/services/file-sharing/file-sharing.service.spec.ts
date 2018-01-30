@@ -18,7 +18,7 @@ describe('FileSharingService', () => {
   }));
 });
 
-fdescribe('xml2js parser', () => {
+describe('xml2js parser', () => {
   let parser: Parser;
 
   beforeEach(() => {
