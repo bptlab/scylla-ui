@@ -1,6 +1,10 @@
 export interface ResourceUtilization {
     configuration: Configuration;
-    processes: Process [];
+    // processes: Process[];
+    processes: {
+      process: Process;
+    }
+    resources: Resource[];
 }
 
 export interface Configuration {
@@ -19,7 +23,6 @@ export interface Process {
     };
     instances: ProcessInstance[];
     activities: Activity[];
-    resources: Resource[];
 }
 
 export interface ProcessInstance {
@@ -42,6 +45,7 @@ export interface Resource {
         in_use: Statistics;
         available: Statistics;
     };
+    // instances: { [id: string]: {ResourceInstance} };
     instances: ResourceInstance[];
 }
 
@@ -69,6 +73,7 @@ export interface Activity {
 }
 
 export interface ActivityInstance {
+    id: string;
     cost: number;
     time: {
         waiting: number;
