@@ -1,3 +1,6 @@
+/*
+  TODO: Change processes obj when parsing is done correctly
+*/
 export interface ResourceUtilization {
     configuration: Configuration;
     // processes: Process[];
