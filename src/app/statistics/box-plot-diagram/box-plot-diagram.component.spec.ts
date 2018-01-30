@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BoxPlotDiagramComponent } from './box-plot-diagram.component';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('BoxPlotDiagramComponent', () => {
   let component: BoxPlotDiagramComponent;

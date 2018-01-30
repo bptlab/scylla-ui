@@ -14,7 +14,9 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit() {
-    this.basicChart();
+    if (this.statistics) {
+      this.basicChart();
+    }
   }
 
   basicChart() {
