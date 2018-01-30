@@ -56,3 +56,10 @@ after_script:
   - docker build -t bptlab/scylla-ui:latest .
   - docker login --username $DOCKER_USERSAME --password $DOCKER_PASSWORD
   - docker push bptlab/scylla-ui:latest
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker build -t bptlab/scylla-ui:latest;
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker push bptlab/scylla-ui:latest;
+    fi
