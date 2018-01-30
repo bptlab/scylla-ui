@@ -11,7 +11,7 @@ git:
   depth: 3
   lfs_skip_smudge: true
 
-notifications: 
+notifications:
   email: false
 
 cache:
@@ -30,7 +30,7 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
-install: 
+install:
   - npm install
   - npm install -g angular-cli
   - npm install -g karma
@@ -45,7 +45,7 @@ before_script:
   - ng lint
   - ng build --aot --prod
   - ng serve & ng e2e
-  
+
 
 script:
 - ng test --code-coverage --watch=false
@@ -53,3 +53,6 @@ script:
 after_script:
   - "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - docker build -t bptlab/scylla-ui:latest .
+  - docker login --username $DOCKER_USERSAME --password $DOCKER_PASSWORD
+  - docker push bptlab/scylla-ui:latest
