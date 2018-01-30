@@ -1,19 +1,19 @@
 <div fxLayout="row" fxLayoutAlign="space-evenly center">
 
   <div fxLayout="column" fxLayoutAlign="space-evenly center">
-  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Costs'"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Costs'" [chartId]="'Costs' + ressourceId"></app-box-plot-diagram>
   Average:
   Total:
 </div>
   <div fxLayout="column" fxLayoutAlign="space-evenly center">
-    <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Time In Use'"></app-box-plot-diagram>
+    <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Time In Use'"[chartId]="'Time In Use' + ressourceId"></app-box-plot-diagram>
     Average:
     Total:
   </div>
   <div fxLayout="column" fxLayoutAlign="space-evenly center">
-    <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Time Available'"></app-box-plot-diagram>
+    <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Time Available'" [chartId]="'Time Available' + ressourceId"></app-box-plot-diagram>
     Average:
     Total:
   </div>
-  <app-pie-chart [workload]="30" label="'hola"></app-pie-chart>
+  <app-pie-chart [workload]="30" [label]="ressourceId"></app-pie-chart>
 </div>

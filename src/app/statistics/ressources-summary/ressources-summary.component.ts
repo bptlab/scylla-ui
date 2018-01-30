@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-ressources-summary',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ressources-summary.component.css']
 })
 export class RessourcesSummaryComponent implements OnInit {
+
+  @Input() ressourceId: string;
 
   constructor() { }
 

@@ -13,6 +13,7 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
   @Input() q1: number;
   @Input() q3: number;
   @Input() label: string;
+  @Input() chartId: string;
 
   constructor() { }
 
@@ -38,14 +39,13 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
     };
 
     const layout = {
-      title: this.label,
       showlegend: false,
 
     };
 
     const data = [trace1];
 
-    Plotly.newPlot('chart_' + this.label, data, layout, {displayModeBar: false});
+    Plotly.newPlot('chart_' + this.chartId, data, layout, {displayModeBar: false});
   }
 
 }

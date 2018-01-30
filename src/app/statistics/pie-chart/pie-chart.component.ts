@@ -20,13 +20,15 @@ export class PieChartComponent implements AfterViewInit {
     const data = [{
       values: [19, 26],
       labels: ['In Use', 'Available'],
+      marker: {
+        colors: ['rgb(147,112,219)', 'rgb(211,211,211)'],
+      },
       type: 'pie'
     }];
 
     const layout = {
-      title: 'Workload',
       height: 400,
-      width: 500
+      width: 400
     };
 
     Plotly.newPlot('chart_' + this.label, data, layout, {displayModeBar: false});

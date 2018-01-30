@@ -1,7 +1,7 @@
 <div fxLayout="row" fxLayoutAlign="space-evenly center">
-  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Costs'"></app-box-plot-diagram>
-  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Flow Time'"></app-box-plot-diagram>
-  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Waiting Time'"></app-box-plot-diagram>
-  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Effective Time'"></app-box-plot-diagram>
-  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Off-timetable Time'"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Costs'" [chartId]="'Costs' + processID"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Flow Time'" [chartId]="'Flow Time' + processID"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Waiting Time'" [chartId]="'Waiting Time' + processID"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Effective Time'" [chartId]="'Effective Time' + processID"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [min]="1" [max]="100" [median]="50" [q1]="30" [q3]="70" [label]="'Off-timetable Time'" [chartId]="'Off-timetable Time' + processID"></app-box-plot-diagram>
 </div>

@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ActivitySummaryComponent implements OnInit {
 
-  @Input() inputId: string;
+  @Input() activityId: string;
 
   constructor() { }
 

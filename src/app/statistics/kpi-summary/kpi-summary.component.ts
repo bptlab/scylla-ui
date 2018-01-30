@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-kpi-summary',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./kpi-summary.component.css']
 })
 export class KpiSummaryComponent implements OnInit {
+
+  @Input() processID: string;
 
   constructor() { }
 
