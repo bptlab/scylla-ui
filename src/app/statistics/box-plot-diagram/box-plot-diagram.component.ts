@@ -18,7 +18,24 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
   }
 
   basicChart() {
-    const y1 = [
+    const trace1 = this.trace1();
+
+    const layout = {
+      title: this.label,
+      showlegend: false,
+    };
+
+    const data = [trace1];
+
+    this.plot(this.label, data, layout);
+  }
+
+  private plot(label: string, data: any, layout: { title: string, showlegend: Boolean}) {
+    Plotly.newPlot('chart_' + label, data, layout);
+  }
+
+  private y1() {
+    return [
       this.statistics.min,
       this.statistics.max,
       this.statistics.median,
@@ -26,9 +43,11 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
       this.statistics.Q1,
       this.statistics.Q3
     ];
+  }
 
-    const trace1 = {
-      y: y1,
+  private trace1() {
+    return {
+      y: this.y1(),
       type: 'box',
       name: this.label,
       boxpoints: false,
@@ -40,15 +59,5 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
         width: 1
       }
     };
-
-    const layout = {
-      title: this.label,
-      showlegend: false,
-    };
-
-    const data = [trace1];
-
-    Plotly.newPlot('chart_' + this.label, data, layout);
   }
-
 }
