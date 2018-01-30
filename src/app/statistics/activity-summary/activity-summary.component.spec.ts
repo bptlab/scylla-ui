@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActivitySummaryComponent } from './activity-summary.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('ActivitySummaryComponent', () => {
   let component: ActivitySummaryComponent;
@@ -8,7 +9,8 @@ describe('ActivitySummaryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActivitySummaryComponent ]
+      declarations: [ ActivitySummaryComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));

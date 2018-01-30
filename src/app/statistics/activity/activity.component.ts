@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import Activity = ProcessStatistics.Activity;
+import {Activity} from '../../services/statistics/process-statistics';
 
 @Component({
   selector: 'app-activity',
@@ -24,7 +24,7 @@ export class ActivityComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.bpmnViewer.colorTask(this.activity);
+    // this.bpmnViewer.colorTask(this.activity);
   }
 
 }

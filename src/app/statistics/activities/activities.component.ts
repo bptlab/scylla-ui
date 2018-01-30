@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import Activity = ProcessStatistics.Activity;
 
 @Component({
   selector: 'app-activities',

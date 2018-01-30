@@ -50,7 +50,8 @@ export class BpmnViewerComponent implements OnInit {
 
   }
 
-  colorTask(taskID) {
+  public colorTask(taskID) {
+    console.log('colorTask wurde aufgerufen');
     // TODO implement
   }
 

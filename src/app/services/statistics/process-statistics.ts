@@ -1,4 +1,3 @@
-declare namespace ProcessStatistics {
 
     export interface ResourceUtilization {
         config: Configuration;
@@ -85,4 +84,4 @@ declare namespace ProcessStatistics {
         Q3?: number;
         total?: number;
     }
-}
+
