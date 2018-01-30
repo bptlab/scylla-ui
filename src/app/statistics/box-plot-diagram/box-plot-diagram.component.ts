@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, Input} from '@angular/core';
+import { Statistics } from '../../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-box-plot-diagram',
@@ -7,24 +8,48 @@ import {AfterViewInit, Component, Input} from '@angular/core';
 })
 export class BoxPlotDiagramComponent implements AfterViewInit {
 
-  @Input() min: number;
-  @Input() max: number;
-  @Input() median: number;
-  @Input() q1: number;
-  @Input() q3: number;
   @Input() label: string;
+  @Input() statistics: Statistics;
 
   constructor() { }
 
   ngAfterViewInit() {
-    this.basicChart();
+    if (this.statistics) {
+      this.basicChart();
+    }
   }
 
   basicChart() {
-    const y1 = [this.min, this.max, this.median, this.median, this.q1, this.q3];
+    const trace1 = this.trace1();
 
-    const trace1 = {
-      y: y1,
+    const layout = {
+      title: this.label,
+      showlegend: false,
+    };
+
+    const data = [trace1];
+
+    this.plot(this.label, data, layout);
+  }
+
+  private plot(label: string, data: any, layout: { title: string, showlegend: Boolean}) {
+    Plotly.newPlot('chart_' + label, data, layout);
+  }
+
+  private y1() {
+    return [
+      this.statistics.min,
+      this.statistics.max,
+      this.statistics.median,
+      this.statistics.median,
+      this.statistics.Q1,
+      this.statistics.Q3
+    ];
+  }
+
+  private trace1() {
+    return {
+      y: this.y1(),
       type: 'box',
       name: this.label,
       boxpoints: false,
@@ -36,15 +61,5 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
         width: 1
       }
     };
-
-    const layout = {
-      title: this.label,
-      showlegend: false,
-    };
-
-    const data = [trace1];
-
-    Plotly.newPlot('chart_' + this.label, data, layout);
   }
-
 }

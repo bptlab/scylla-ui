@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FileSharingService } from '../services/file-sharing/file-sharing.service';
+import { ResourceUtilization } from '../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-statistics',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./statistics.component.css']
 })
 export class StatisticsComponent implements OnInit {
+  private statistics: ResourceUtilization;
 
-  constructor() { }
+  constructor(private service: FileSharingService) {
+    this.statistics = this.service.resourceUtil;
+  }
 
   ngOnInit() {
   }
