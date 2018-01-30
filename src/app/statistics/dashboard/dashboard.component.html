@@ -2,13 +2,16 @@
 <mat-card>
   <mat-card-title>General information</mat-card-title>
   <mat-card-content>
-    <app-kpi-summary [processID]=" "></app-kpi-summary>
+    <app-kpi-summary [statistics]="statistics.processes.process" [processID]="statistics.processes.process.id"></app-kpi-summary>
   </mat-card-content>
 </mat-card>
 <mat-card>
   <mat-card-title>Process model</mat-card-title>
   <mat-card-content>
-    <app-bpmn-viewer></app-bpmn-viewer>
+    <app-bpmn-viewer #bpmn></app-bpmn-viewer>
   </mat-card-content>
+  <mat-card-actions>
+    <a (click)="bpmn.centerModel()" mat-button>Recenter</a>
+  </mat-card-actions>
 </mat-card>
 

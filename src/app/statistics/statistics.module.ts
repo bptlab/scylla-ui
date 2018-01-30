@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material';
 import { BoxPlotDiagramComponent } from './box-plot-diagram/box-plot-diagram.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { KpiSummaryComponent } from './kpi-summary/kpi-summary.component';
@@ -31,6 +32,7 @@ import { ActivitySummaryComponent } from './activity-summary/activity-summary.co
     MatIconModule,
     MatMenuModule,
     MatCardModule,
+    MatButtonModule,
     FlexLayoutModule
   ],
   declarations: [

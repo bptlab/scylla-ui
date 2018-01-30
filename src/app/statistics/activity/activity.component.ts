@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import {Activity} from '../../services/statistics/process-statistics';
+import {Activity} from '../../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-activity',

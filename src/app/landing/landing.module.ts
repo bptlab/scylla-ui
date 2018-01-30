@@ -13,7 +13,6 @@ import { LandingRoutingModule } from './landing-routing.module';
 import { FileSelectionComponent } from './file-selection/file-selection.component';
 import { LandingComponent } from './landing.component';
 import { FileReaderComponent } from './file-selection/file-reader/file-reader.component';
-import { ProcessStatisticsService } from '../services/statistics/process-statistics.service';
 import {FileSharingService} from '../services/file-sharing/file-sharing.service';
 import { MenuModule } from '../menu/menu.module';
 
@@ -34,6 +33,6 @@ import { MenuModule } from '../menu/menu.module';
     RouterModule
   ],
   bootstrap: [LandingComponent],
-  providers: [FileSharingService, ProcessStatisticsService]
+  providers: [FileSharingService]
 })
 export class LandingModule { }

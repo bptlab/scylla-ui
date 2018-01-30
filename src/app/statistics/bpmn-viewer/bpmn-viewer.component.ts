@@ -30,13 +30,13 @@ export class BpmnViewerComponent implements OnInit {
         console.log('error rendering', err);
       } else {
         const canvas = this.viewer.get('canvas');
-        canvas.zoom('fit-viewport');
 
         // click events
         const eventBus = this.viewer.get('eventBus');
         eventBus.on('element.click', task => {
           this.navigateToTask(task);
         });
+        this.centerModel();
       }
     });
 
@@ -53,6 +53,11 @@ export class BpmnViewerComponent implements OnInit {
   public colorTask(taskID) {
     console.log('colorTask wurde aufgerufen');
     // TODO implement
+  }
+
+  centerModel() {
+    const canvas = this.viewer.get('canvas');
+    canvas.zoom('fit-viewport');
   }
 
 }

@@ -15,10 +15,7 @@ export class FileReaderComponent implements OnInit {
   fileSrc = '';
   displayedFileName: string;
 
-  constructor(private service: FileSharingService) {
-
-
-  }
+  constructor(private service: FileSharingService) { }
 
   ngOnInit() {
     if (this.service.getData(this.data)) {
