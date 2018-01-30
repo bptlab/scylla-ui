@@ -8,7 +8,7 @@ import { ResourceUtilization } from '../../services/file-sharing/process-statist
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  private statistics: ResourceUtilization;
+  public statistics: ResourceUtilization;
 
   constructor(private service: FileSharingService) {
     this.statistics = this.service.resourceUtil;
