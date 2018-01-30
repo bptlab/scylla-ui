@@ -52,6 +52,7 @@ export interface ResourceInstance {
     time: {
         in_use: number;
         available: number;
+        workload: number;
     };
 }
 
@@ -71,7 +72,7 @@ export interface ActivityInstance {
     cost: number;
     time: {
         waiting: number;
-        duration: number;
+        effective: number;
         resources_idle: number;
     };
 }
