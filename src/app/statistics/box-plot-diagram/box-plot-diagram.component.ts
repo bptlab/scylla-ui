@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, Input} from '@angular/core';
+import { Statistics } from '../../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-box-plot-diagram',
@@ -7,12 +8,8 @@ import {AfterViewInit, Component, Input} from '@angular/core';
 })
 export class BoxPlotDiagramComponent implements AfterViewInit {
 
-  @Input() min: number;
-  @Input() max: number;
-  @Input() median: number;
-  @Input() q1: number;
-  @Input() q3: number;
   @Input() label: string;
+  @Input() statistics: Statistics;
 
   constructor() { }
 
@@ -21,7 +18,14 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
   }
 
   basicChart() {
-    const y1 = [this.min, this.max, this.median, this.median, this.q1, this.q3];
+    const y1 = [
+      this.statistics.min,
+      this.statistics.max,
+      this.statistics.median,
+      this.statistics.median,
+      this.statistics.Q1,
+      this.statistics.Q3
+    ];
 
     const trace1 = {
       y: y1,
