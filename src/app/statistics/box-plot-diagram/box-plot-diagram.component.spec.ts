@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BoxPlotDiagramComponent } from './box-plot-diagram.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
 
 describe('BoxPlotDiagramComponent', () => {
   let component: BoxPlotDiagramComponent;
@@ -8,7 +8,8 @@ describe('BoxPlotDiagramComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BoxPlotDiagramComponent ]
+      declarations: [ BoxPlotDiagramComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));

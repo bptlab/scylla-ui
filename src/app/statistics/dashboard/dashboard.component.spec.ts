@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { FileSharingService } from '../../services/file-sharing/file-sharing.service';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -10,7 +11,8 @@ describe('DashboardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ DashboardComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+      providers: [FileSharingService]
     })
     .compileComponents();
   }));
