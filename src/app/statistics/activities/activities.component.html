@@ -1,0 +1,8 @@
+<div *ngFor="let activity of activities">
+  <mat-card>
+    <mat-card-title>{{activity.name}}</mat-card-title>
+    <mat-card-content>
+      <app-activity-summary [statistics]="activity"></app-activity-summary>
+    </mat-card-content>
+  </mat-card>
+</div>

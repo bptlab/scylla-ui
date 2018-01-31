@@ -10,6 +10,8 @@ import { Process, Activity } from '../../services/file-sharing/process-statistic
 export class KpiSummaryComponent implements OnInit {
   @Input() statistics: Process;
 
+  @Input() processID: string;
+
   constructor() { }
 
   ngOnInit() {

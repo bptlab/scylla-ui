@@ -9,6 +9,7 @@ import { Statistics } from '../../services/file-sharing/process-statistics';
 export class BoxPlotDiagramComponent implements AfterViewInit {
 
   @Input() label: string;
+  @Input() chartId: string;
   @Input() statistics: Statistics;
 
   constructor() { }
@@ -23,17 +24,16 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
     const trace1 = this.trace1();
 
     const layout = {
-      title: this.label,
       showlegend: false,
     };
 
     const data = [trace1];
 
-    this.plot(this.label, data, layout);
+    this.plot(this.chartId, data, layout);
   }
 
-  private plot(label: string, data: any, layout: { title: string, showlegend: Boolean}) {
-    Plotly.newPlot('chart_' + label, data, layout);
+  private plot(chartId: string, data: any, layout: { showlegend: Boolean}) {
+    Plotly.newPlot('chart_' + chartId, data, layout, {displayModeBar: false});
   }
 
   private y1() {
@@ -59,7 +59,7 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
       },
       line: {
         width: 1
-      }
+      },
     };
   }
 }

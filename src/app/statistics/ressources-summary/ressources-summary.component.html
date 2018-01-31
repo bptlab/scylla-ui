@@ -1,18 +1,19 @@
 <div fxLayout="row" fxLayoutAlign="space-evenly center">
 
   <div fxLayout="column" fxLayoutAlign="space-evenly center">
-  <app-box-plot-diagram class="boxplot" [statistics]="" [label]="'Costs'"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [statistics]="statistics.cost" [label]="'Costs'" [chartId]="'Costs' + statistics.type"></app-box-plot-diagram>
   Average:
   Total:
 </div>
   <div fxLayout="column" fxLayoutAlign="space-evenly center">
-    <app-box-plot-diagram class="boxplot" [statistics]="" [label]="'Time In Use'"></app-box-plot-diagram>
+    <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.in_use" [label]="'Time In Use'" [chartId]="'Time In Use' + statistics.type"></app-box-plot-diagram>
     Average:
     Total:
   </div>
   <div fxLayout="column" fxLayoutAlign="space-evenly center">
-    <app-box-plot-diagram class="boxplot" [statistics]="" [label]="'Time Available'"></app-box-plot-diagram>
+    <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.available" [label]="'Time Available'" [chartId]="'Time Available' + statistics.type"></app-box-plot-diagram>
     Average:
     Total:
   </div>
+  <app-pie-chart [workload]="statistics.time.workload.median" [label]="statistics.type"></app-pie-chart>
 </div>

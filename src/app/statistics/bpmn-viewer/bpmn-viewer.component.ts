@@ -3,6 +3,7 @@ import { FileSharingService } from '../../services/file-sharing/file-sharing.ser
 
 import 'bpmn-js';
 import 'bpmn-js/lib/NavigatedViewer';
+import {Router} from '@angular/router';
 
 const bpmnViewer = require('bpmn-js/lib/NavigatedViewer');
 
@@ -19,7 +20,7 @@ export class BpmnViewerComponent implements OnInit {
     this.loadBPMN();
   }
 
-  constructor(private fileService: FileSharingService) { }
+  constructor(private fileService: FileSharingService, private router: Router) { }
 
   loadBPMN() {
     const xml = this.fileService.getData('bpmn'); // my BPMN 2.0 xml
@@ -28,9 +29,30 @@ export class BpmnViewerComponent implements OnInit {
       if (err) {
         console.log('error rendering', err);
       } else {
+        const canvas = this.viewer.get('canvas');
+
+        // click events
+        const eventBus = this.viewer.get('eventBus');
+        eventBus.on('element.click', task => {
+          this.navigateToTask(task);
+        });
         this.centerModel();
       }
     });
+
+  }
+
+  navigateToTask(task) {
+    if (task.element.type === 'bpmn:Task') {
+      this.router.navigate(['/statistics/activities/' + task.element.id]);
+      console.log(task.element.id);
+    }
+
+  }
+
+  public colorTask(taskID) {
+    console.log('colorTask wurde aufgerufen');
+    // TODO implement
   }
 
   centerModel() {

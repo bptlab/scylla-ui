@@ -1,0 +1,6 @@
+<div fxLayout="row" fxLayoutAlign="space-evenly center">
+  <app-box-plot-diagram class="boxplot" [statistics]="statistics.cost" [label]="'Costs'" [chartId]="'Costs'+statistics.id"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.duration" [label]="'Duration'" [chartId]="'Duration'+statistics.id"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.waiting" [label]="'Waiting Time'" [chartId]="'Waiting Time'+statistics.id"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.resources_idle" [label]="'Resources-idle Time'" [chartId]="'Resources-idle Time'+statistics.id"></app-box-plot-diagram>
+</div>

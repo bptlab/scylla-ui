@@ -1,26 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { BpmnViewerComponent } from './bpmn-viewer.component';
+import { ActivityComponent } from './activity.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {FileSharingService} from '../../services/file-sharing/file-sharing.service';
 import { RouterTestingModule } from '@angular/router/testing';
 
-describe('BpmnViewerComponent', () => {
-  let component: BpmnViewerComponent;
-  let fixture: ComponentFixture<BpmnViewerComponent>;
+
+
+describe('ActivityComponent', () => {
+  let component: ActivityComponent;
+  let fixture: ComponentFixture<ActivityComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule.withRoutes([])],
-      declarations: [ BpmnViewerComponent ],
-      providers: [FileSharingService],
+      declarations: [ ActivityComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BpmnViewerComponent);
+    fixture = TestBed.createComponent(ActivityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
