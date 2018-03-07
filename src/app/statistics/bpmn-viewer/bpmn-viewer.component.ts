@@ -47,7 +47,8 @@ export class BpmnViewerComponent implements OnInit {
       this.router.navigate(['/statistics/activities/' + task.element.id]);
       console.log(task.element.id);
     }
-
+    const canvas = this.viewer.get('canvas');
+    canvas.zoom(1, task.element.position);
   }
 
   public colorTask(taskID) {
