@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { KpiSummaryComponent } from './kpi-summary.component';
+import {SimulationKpiComponent} from './simulation-kpi.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
-describe('KpiSummaryComponent', () => {
-  let component: KpiSummaryComponent;
-  let fixture: ComponentFixture<KpiSummaryComponent>;
+describe('SimulationKpiComponent', () => {
+  let component: SimulationKpiComponent;
+  let fixture: ComponentFixture<SimulationKpiComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ KpiSummaryComponent ],
+      declarations: [ SimulationKpiComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(KpiSummaryComponent);
+    fixture = TestBed.createComponent(SimulationKpiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

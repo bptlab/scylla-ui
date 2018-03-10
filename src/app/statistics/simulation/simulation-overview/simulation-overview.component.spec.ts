@@ -1,15 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DashboardComponent } from './dashboard.component';
+import { SimulationOverviewComponent } from './simulation-overview.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { FileSharingService } from '../../../services/file-sharing/file-sharing.service';
 
-describe('DashboardComponent', () => {
-  let component: DashboardComponent;
-  let fixture: ComponentFixture<DashboardComponent>;
+describe('SimulationOverviewComponent', () => {
+  let component: SimulationOverviewComponent;
+  let fixture: ComponentFixture<SimulationOverviewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ],
+      declarations: [ SimulationOverviewComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       providers: [FileSharingService]
     })
@@ -17,7 +17,7 @@ describe('DashboardComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardComponent);
+    fixture = TestBed.createComponent(SimulationOverviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

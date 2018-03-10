@@ -3,11 +3,11 @@ import { FileSharingService } from '../../../services/file-sharing/file-sharing.
 import { ResourceUtilization } from '../../../services/file-sharing/process-statistics';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-simulation-overview',
+  templateUrl: './simulation-overview.component.html',
+  styleUrls: ['./simulation-overview.css']
 })
-export class DashboardComponent implements OnInit {
+export class SimulationOverviewComponent implements OnInit {
   public statistics: ResourceUtilization;
 
   constructor(private service: FileSharingService) {

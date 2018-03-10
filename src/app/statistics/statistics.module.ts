@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StatisticsComponent } from './statistics.component';
 import { BpmnViewerComponent } from './diagrams/bpmn-viewer/bpmn-viewer.component';
 import { StatisticsRoutingModule } from './statistics-routing.module';
-import { DashboardComponent } from './simulation/dashboard/dashboard.component';
+import {SimulationOverviewComponent} from './simulation/simulation-overview/simulation-overview.component';
 import { MenuModule } from '../menu/menu.module';
 import { FilesSelectedGuard } from '../guards/files-selected.guard';
 import { MatSidenavModule } from '@angular/material';
@@ -14,13 +14,13 @@ import { MatCardModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { BoxPlotDiagramComponent } from './diagrams/box-plot-diagram/box-plot-diagram.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { KpiSummaryComponent } from './simulation/kpi-summary/kpi-summary.component';
 import { RessourcesComponent } from './ressource/ressources/ressources.component';
 import { RessourcesSummaryComponent } from './ressource/ressources-summary/ressources-summary.component';
 import { PieChartComponent } from './diagrams/pie-chart/pie-chart.component';
 import {ActivitiesComponent} from './activity/activities/activities.component';
 import {ActivityComponent} from './activity/activity-detail/activity.component';
 import { ActivitySummaryComponent } from './activity/activity-summary/activity-summary.component';
+import {SimulationKpiComponent} from './simulation/simulation-kpi/simulation-kpi.component';
 
 @NgModule({
   imports: [
@@ -38,15 +38,15 @@ import { ActivitySummaryComponent } from './activity/activity-summary/activity-s
   declarations: [
     StatisticsComponent,
     BpmnViewerComponent,
-    DashboardComponent,
+    SimulationOverviewComponent,
     BoxPlotDiagramComponent,
-    KpiSummaryComponent,
+    SimulationKpiComponent,
     RessourcesComponent,
     RessourcesSummaryComponent,
     PieChartComponent,
     ActivitiesComponent,
-  ActivityComponent,
-  ActivitySummaryComponent],
+    ActivityComponent,
+    ActivitySummaryComponent],
   providers: [
     FilesSelectedGuard
   ]

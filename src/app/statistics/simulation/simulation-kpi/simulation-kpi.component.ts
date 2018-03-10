@@ -3,11 +3,11 @@ import { Input } from '@angular/core';
 import { Process } from '../../../services/file-sharing/process-statistics';
 
 @Component({
-  selector: 'app-kpi-summary',
-  templateUrl: './kpi-summary.component.html',
-  styleUrls: ['./kpi-summary.component.css']
+  selector: 'app-simulation-kpi',
+  templateUrl: './simulation-kpi.component.html',
+  styleUrls: ['./simulation-kpi.component.css']
 })
-export class KpiSummaryComponent implements OnInit {
+export class SimulationKpiComponent implements OnInit {
   @Input() statistics: Process;
   @Input() processID: string;
 
