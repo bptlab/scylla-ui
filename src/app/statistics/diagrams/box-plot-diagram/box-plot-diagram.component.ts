@@ -38,12 +38,12 @@ export class BoxPlotDiagramComponent implements AfterViewInit {
 
   private y1() {
     return [
-      this.statistics.min,
-      this.statistics.max,
-      this.statistics.median,
-      this.statistics.median,
-      this.statistics.Q1,
-      this.statistics.Q3
+      Math.round(this.statistics.min * 100) / 100,
+      Math.round(this.statistics.max * 100) / 100,
+      Math.round(this.statistics.median * 100) / 100,
+      Math.round(this.statistics.median * 100) / 100,
+      Math.round(this.statistics.Q1 * 100) / 100,
+      Math.round(this.statistics.Q3 * 100) / 100,
     ];
   }
 
