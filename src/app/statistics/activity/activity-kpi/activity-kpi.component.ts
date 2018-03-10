@@ -2,11 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import { Activity } from '../../../services/file-sharing/process-statistics';
 
 @Component({
-  selector: 'app-activity-summary',
-  templateUrl: './activity-summary.component.html',
-  styleUrls: ['./activity-summary.component.css']
+  selector: 'app-activity-kpi',
+  templateUrl: './activity-kpi.component.html',
+  styleUrls: ['./activity-kpi.component.css']
 })
-export class ActivitySummaryComponent implements OnInit {
+export class ActivityKpiComponent implements OnInit {
   @Input() statistics: Activity;
 
   constructor() { }

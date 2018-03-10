@@ -3,11 +3,11 @@ import { Resource } from '../../../services/file-sharing/process-statistics';
 import { FileSharingService } from '../../../services/file-sharing/file-sharing.service';
 
 @Component({
-  selector: 'app-resources-overview',
-  templateUrl: './resources-overview.component.html',
-  styleUrls: ['./resources-overview.component.css']
+  selector: 'app-resource-overview',
+  templateUrl: './resource-overview.component.html',
+  styleUrls: ['./resource-overview.component.css']
 })
-export class RessourcesOverviewComponent implements OnInit {
+export class ResourceOverviewComponent implements OnInit {
   public resources: Resource[];
 
   constructor(private service: FileSharingService) {

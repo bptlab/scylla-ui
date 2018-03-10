@@ -1,25 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { ActivityComponent } from './activity.component';
+import { ActivityDetailComponent } from './activity-detail.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 
 
 
-describe('ActivityComponent', () => {
-  let component: ActivityComponent;
-  let fixture: ComponentFixture<ActivityComponent>;
+describe('ActivityDetailComponent', () => {
+  let component: ActivityDetailComponent;
+  let fixture: ComponentFixture<ActivityDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule.withRoutes([])],
-      declarations: [ ActivityComponent ],
+      declarations: [ ActivityDetailComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ActivityComponent);
+    fixture = TestBed.createComponent(ActivityDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ActivitiesComponent } from './activities.component';
+import { ResourceOverviewComponent } from './resource-overview.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
-describe('ActivitiesComponent', () => {
-  let component: ActivitiesComponent;
-  let fixture: ComponentFixture<ActivitiesComponent>;
+describe('ResourceOverviewComponent', () => {
+  let component: ResourceOverviewComponent;
+  let fixture: ComponentFixture<ResourceOverviewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActivitiesComponent ],
+      declarations: [ ResourceOverviewComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ActivitiesComponent);
+    fixture = TestBed.createComponent(ResourceOverviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

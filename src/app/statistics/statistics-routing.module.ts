@@ -4,9 +4,9 @@ import { RouterModule } from '@angular/router';
 import { StatisticsComponent } from './statistics.component';
 import { SimulationOverviewComponent } from './simulation/simulation-overview/simulation-overview.component';
 import { FilesSelectedGuard } from '../guards/files-selected.guard';
-import { RessourcesOverviewComponent } from './resources/resources-overview/resources-overview.component';
-import {ActivityComponent} from './activities/activity-detail/activity.component';
-import {ActivitiesComponent} from './activities/activities/activities.component';
+import { ResourceOverviewComponent } from './resources/resource-overview/resource-overview.component';
+import { ActivityDetailComponent } from './activity/activity-detail/activity-detail.component';
+import { ActivityOverviewComponent} from './activity/activity-overview/activity-overview.component';
 
 export const ROUTES = [
   {
@@ -15,9 +15,9 @@ export const ROUTES = [
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'simulation-overview' },
       { path: 'simulation-overview', component: SimulationOverviewComponent },
-      { path: 'resources-overview', component: RessourcesOverviewComponent },
-      { path: 'activities', component: ActivitiesComponent },
-      { path: 'activities/:activity_id', component: ActivityComponent}
+      { path: 'resource-overview', component: ResourceOverviewComponent },
+      { path: 'activity-overview', component: ActivityOverviewComponent },
+      { path: 'activity/:activity_id', component: ActivityDetailComponent}
 
     ],
     canActivate: [ FilesSelectedGuard ]

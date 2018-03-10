@@ -4,11 +4,11 @@ import {Activity} from '../../../services/file-sharing/process-statistics';
 import { FileSharingService } from '../../../services/file-sharing/file-sharing.service';
 
 @Component({
-  selector: 'app-activity',
-  templateUrl: './activity.component.html',
-  styleUrls: ['./activity.component.css']
+  selector: 'app-activity-detail',
+  templateUrl: './activity-detail.component.html',
+  styleUrls: ['./activity-detail.component.css']
 })
-export class ActivityComponent implements OnInit, AfterViewInit {
+export class ActivityDetailComponent implements OnInit, AfterViewInit {
 @ViewChild('bpmnViewer') bpmnViewer;
 
 
@@ -27,7 +27,7 @@ export class ActivityComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // this.bpmnViewer.colorTask(this.activities-detail);
+    // this.bpmnViewer.colorTask(this.activity-detail);
   }
 
 }

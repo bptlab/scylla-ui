@@ -3,11 +3,11 @@ import { Activity } from '../../../services/file-sharing/process-statistics';
 import { FileSharingService } from '../../../services/file-sharing/file-sharing.service';
 
 @Component({
-  selector: 'app-activities',
-  templateUrl: './activities.component.html',
-  styleUrls: ['./activities.component.css']
+  selector: 'app-activity-overview',
+  templateUrl: './activity-overview.component.html',
+  styleUrls: ['./activity-overview.component.css']
 })
-export class ActivitiesComponent {
+export class ActivityOverviewComponent {
   public activities: Activity[];
 
   constructor(private service: FileSharingService) {

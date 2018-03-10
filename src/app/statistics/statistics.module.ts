@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StatisticsComponent } from './statistics.component';
 import { BpmnViewerComponent } from './diagrams/bpmn-viewer/bpmn-viewer.component';
 import { StatisticsRoutingModule } from './statistics-routing.module';
-import {SimulationOverviewComponent} from './simulation/simulation-overview/simulation-overview.component';
+import { SimulationOverviewComponent } from './simulation/simulation-overview/simulation-overview.component';
 import { MenuModule } from '../menu/menu.module';
 import { FilesSelectedGuard } from '../guards/files-selected.guard';
 import { MatSidenavModule } from '@angular/material';
@@ -14,13 +14,13 @@ import { MatCardModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { BoxPlotDiagramComponent } from './diagrams/box-plot-diagram/box-plot-diagram.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { RessourcesOverviewComponent } from './resources/resources-overview/resources-overview.component';
-import { ResourcesKpiComponent } from './resources/resources-kpi/resources-kpi.component';
+import { ResourceOverviewComponent } from './resources/resource-overview/resource-overview.component';
+import { ResourceKpiComponent } from './resources/resource-kpi/resource-kpi.component';
 import { PieChartComponent } from './diagrams/pie-chart/pie-chart.component';
-import {ActivitiesComponent} from './activities/activities/activities.component';
-import {ActivityComponent} from './activities/activity-detail/activity.component';
-import { ActivitySummaryComponent } from './activities/activity-summary/activity-summary.component';
-import {SimulationKpiComponent} from './simulation/simulation-kpi/simulation-kpi.component';
+import { ActivityOverviewComponent } from './activity/activity-overview/activity-overview.component';
+import { ActivityDetailComponent } from './activity/activity-detail/activity-detail.component';
+import { ActivityKpiComponent } from './activity/activity-kpi/activity-kpi.component';
+import { SimulationKpiComponent } from './simulation/simulation-kpi/simulation-kpi.component';
 
 @NgModule({
   imports: [
@@ -41,12 +41,12 @@ import {SimulationKpiComponent} from './simulation/simulation-kpi/simulation-kpi
     SimulationOverviewComponent,
     BoxPlotDiagramComponent,
     SimulationKpiComponent,
-    RessourcesOverviewComponent,
-    ResourcesKpiComponent,
+    ResourceOverviewComponent,
+    ResourceKpiComponent,
     PieChartComponent,
-    ActivitiesComponent,
-    ActivityComponent,
-    ActivitySummaryComponent],
+    ActivityOverviewComponent,
+    ActivityDetailComponent,
+    ActivityKpiComponent],
   providers: [
     FilesSelectedGuard
   ]

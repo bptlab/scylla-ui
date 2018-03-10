@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ResourcesKpiComponent } from './resources-kpi.component';
+import { ActivityKpiComponent } from './activity-kpi.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
-describe('ResourcesKpiComponent', () => {
-  let component: ResourcesKpiComponent;
-  let fixture: ComponentFixture<ResourcesKpiComponent>;
+describe('ActivityKpiComponent', () => {
+  let component: ActivityKpiComponent;
+  let fixture: ComponentFixture<ActivityKpiComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResourcesKpiComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+      declarations: [ ActivityKpiComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ResourcesKpiComponent);
+    fixture = TestBed.createComponent(ActivityKpiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
