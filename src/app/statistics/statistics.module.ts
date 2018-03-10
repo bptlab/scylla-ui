@@ -14,12 +14,12 @@ import { MatCardModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { BoxPlotDiagramComponent } from './diagrams/box-plot-diagram/box-plot-diagram.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { RessourcesComponent } from './ressource/ressources/ressources.component';
-import { RessourcesSummaryComponent } from './ressource/ressources-summary/ressources-summary.component';
+import { RessourcesOverviewComponent } from './resources/resources-overview/resources-overview.component';
+import { ResourcesKpiComponent } from './resources/resources-kpi/resources-kpi.component';
 import { PieChartComponent } from './diagrams/pie-chart/pie-chart.component';
-import {ActivitiesComponent} from './activity/activities/activities.component';
-import {ActivityComponent} from './activity/activity-detail/activity.component';
-import { ActivitySummaryComponent } from './activity/activity-summary/activity-summary.component';
+import {ActivitiesComponent} from './activities/activities/activities.component';
+import {ActivityComponent} from './activities/activity-detail/activity.component';
+import { ActivitySummaryComponent } from './activities/activity-summary/activity-summary.component';
 import {SimulationKpiComponent} from './simulation/simulation-kpi/simulation-kpi.component';
 
 @NgModule({
@@ -41,8 +41,8 @@ import {SimulationKpiComponent} from './simulation/simulation-kpi/simulation-kpi
     SimulationOverviewComponent,
     BoxPlotDiagramComponent,
     SimulationKpiComponent,
-    RessourcesComponent,
-    RessourcesSummaryComponent,
+    RessourcesOverviewComponent,
+    ResourcesKpiComponent,
     PieChartComponent,
     ActivitiesComponent,
     ActivityComponent,

@@ -27,7 +27,7 @@ export class ActivityComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // this.bpmnViewer.colorTask(this.activity-detail);
+    // this.bpmnViewer.colorTask(this.activities-detail);
   }
 
 }
