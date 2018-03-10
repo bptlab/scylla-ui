@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FileSharingService } from '../../services/file-sharing/file-sharing.service';
-import { ResourceUtilization } from '../../services/file-sharing/process-statistics';
+import { FileSharingService } from '../../../services/file-sharing/file-sharing.service';
+import { ResourceUtilization } from '../../../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-dashboard',

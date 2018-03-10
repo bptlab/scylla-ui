@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import {Activity} from '../../services/file-sharing/process-statistics';
-import { FileSharingService } from '../../services/file-sharing/file-sharing.service';
+import {Activity} from '../../../services/file-sharing/process-statistics';
+import { FileSharingService } from '../../../services/file-sharing/file-sharing.service';
 
 @Component({
   selector: 'app-activity',
@@ -27,7 +27,7 @@ export class ActivityComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // this.bpmnViewer.colorTask(this.activity);
+    // this.bpmnViewer.colorTask(this.activity-detail);
   }
 
 }

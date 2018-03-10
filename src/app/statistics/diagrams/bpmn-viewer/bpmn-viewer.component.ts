@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FileSharingService } from '../../services/file-sharing/file-sharing.service';
+import { FileSharingService } from '../../../services/file-sharing/file-sharing.service';
 
 import 'bpmn-js';
 import 'bpmn-js/lib/NavigatedViewer';

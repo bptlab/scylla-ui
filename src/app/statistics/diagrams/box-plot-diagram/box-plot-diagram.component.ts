@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, Input} from '@angular/core';
-import { Statistics } from '../../services/file-sharing/process-statistics';
+import { Statistics } from '../../../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-box-plot-diagram',

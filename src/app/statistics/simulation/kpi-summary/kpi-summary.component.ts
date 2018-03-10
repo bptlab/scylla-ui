@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { Process, Activity } from '../../services/file-sharing/process-statistics';
+import { Process } from '../../../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-kpi-summary',
@@ -9,7 +9,6 @@ import { Process, Activity } from '../../services/file-sharing/process-statistic
 })
 export class KpiSummaryComponent implements OnInit {
   @Input() statistics: Process;
-
   @Input() processID: string;
 
   constructor() { }

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { Activity } from '../../services/file-sharing/process-statistics';
+import { Activity } from '../../../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-activity-summary',

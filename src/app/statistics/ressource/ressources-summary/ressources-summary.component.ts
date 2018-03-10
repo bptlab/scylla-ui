@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FileSharingService } from '../../services/file-sharing/file-sharing.service';
-import { ResourceUtilization, Resource } from '../../services/file-sharing/process-statistics';
+import { Resource } from '../../../services/file-sharing/process-statistics';
 
 @Component({
   selector: 'app-ressources-summary',
