@@ -8,6 +8,7 @@ import { Resource } from '../../../services/file-sharing/process-statistics';
 })
 export class ResourceKpiComponent implements OnInit {
   @Input() statistics: Resource;
+  @Input() timeUnit: string;
 
   constructor() { }
 

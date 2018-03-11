@@ -6,12 +6,12 @@
   Total:
 </div>
   <div fxLayout="column" fxLayoutAlign="space-evenly center">
-    <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.in_use" [label]="'Time In Use'" [chartId]="'Time In Use' + statistics.type"></app-box-plot-diagram>
+    <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.in_use" [label]="'Time In Use in ' + timeUnit" [chartId]="'Time In Use' + statistics.type"></app-box-plot-diagram>
     Average:
     Total:
   </div>
   <div fxLayout="column" fxLayoutAlign="space-evenly center">
-    <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.available" [label]="'Time Available'" [chartId]="'Time Available' + statistics.type"></app-box-plot-diagram>
+    <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.available" [label]="'Time Available in ' + timeUnit" [chartId]="'Time Available' + statistics.type"></app-box-plot-diagram>
     Average:
     Total:
   </div>
