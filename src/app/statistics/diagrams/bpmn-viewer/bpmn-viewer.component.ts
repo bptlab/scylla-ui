@@ -44,8 +44,7 @@ export class BpmnViewerComponent implements OnInit {
 
   navigateToTask(task) {
     if (task.element.type === 'bpmn:Task') {
-      this.router.navigate(['/statistics/activity/' + task.element.id]);
-      console.log(task.element.id);
+      this.router.navigate(['/statistics/activity/' + task.element.businessObject.name]);
     }
 
   }

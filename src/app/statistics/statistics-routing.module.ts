@@ -17,7 +17,7 @@ export const ROUTES = [
       { path: 'simulation-overview', component: SimulationOverviewComponent },
       { path: 'resource-overview', component: ResourceOverviewComponent },
       { path: 'activity-overview', component: ActivityOverviewComponent },
-      { path: 'activity/:activity_id', component: ActivityDetailComponent}
+      { path: 'activity/:activity_name', component: ActivityDetailComponent}
 
     ],
     canActivate: [ FilesSelectedGuard ]

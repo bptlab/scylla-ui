@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivityDetailComponent } from './activity-detail.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
+import {FileSharingService} from '../../../services/file-sharing/file-sharing.service';
 
 
 
@@ -13,6 +14,7 @@ describe('ActivityDetailComponent', () => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule.withRoutes([])],
       declarations: [ ActivityDetailComponent ],
+      providers: [FileSharingService],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
