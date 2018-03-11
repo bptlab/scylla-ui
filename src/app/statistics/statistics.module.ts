@@ -21,6 +21,7 @@ import { ActivityOverviewComponent } from './activity/activity-overview/activity
 import { ActivityDetailComponent } from './activity/activity-detail/activity-detail.component';
 import { ActivityKpiComponent } from './activity/activity-kpi/activity-kpi.component';
 import { SimulationKpiComponent } from './simulation/simulation-kpi/simulation-kpi.component';
+import { ResourceDetailComponent } from './resources/resource-detail/resource-detail.component';
 
 @NgModule({
   imports: [
@@ -46,7 +47,8 @@ import { SimulationKpiComponent } from './simulation/simulation-kpi/simulation-k
     PieChartComponent,
     ActivityOverviewComponent,
     ActivityDetailComponent,
-    ActivityKpiComponent],
+    ActivityKpiComponent,
+    ResourceDetailComponent],
   providers: [
     FilesSelectedGuard
   ]
