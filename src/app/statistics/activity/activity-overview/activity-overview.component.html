@@ -4,5 +4,8 @@
     <mat-card-content>
       <app-activity-kpi [statistics]="activity" [timeUnit]="timeUnit"></app-activity-kpi>
     </mat-card-content>
+    <mat-card-actions>
+      <a mat-button routerLink="/statistics/activity/{{activity.name}}">Show Details</a>
+    </mat-card-actions>
   </mat-card>
 </div>

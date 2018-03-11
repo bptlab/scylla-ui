@@ -8,7 +8,7 @@ import { FileSharingService } from '../../../services/file-sharing/file-sharing.
   templateUrl: './activity-detail.component.html',
   styleUrls: ['./activity-detail.component.css']
 })
-export class ActivityDetailComponent implements OnInit, AfterViewInit {
+export class ActivityDetailComponent implements OnInit {
 @ViewChild('bpmnViewer') bpmnViewer;
 
 
@@ -26,10 +26,6 @@ export class ActivityDetailComponent implements OnInit, AfterViewInit {
       this.activity = this.service.resourceUtilization.processes.process.activities.find(task => task.name === name);
       this.timeUnit = this.service.resourceUtilization.configuration.time_unit.toLowerCase();
     });
-  }
-
-  ngAfterViewInit() {
-    // this.bpmnViewer.colorTask(this.activity-detail);
   }
 
 }
