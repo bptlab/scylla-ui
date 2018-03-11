@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>{{resource.type}}</mat-card-title>
+  <mat-card-content>
+    <app-resource-kpi [statistics]="resource" [timeUnit]="timeUnit"></app-resource-kpi>
+  </mat-card-content>
+</mat-card>
+<div *ngFor="let instance of resource.instances">
+  <mat-card>
+    <mat-card-title>
+      Instance {{ instance.id }}
+    </mat-card-title>
+    <mat-card-content>
+      Cost: {{instance.cost}},
+      Time available: {{instance.time.available | number:'1.2-2'}},
+      Workload: {{instance.time.workload | number:'1.2-2'}}
+    </mat-card-content>
+  </mat-card>
+</div>
