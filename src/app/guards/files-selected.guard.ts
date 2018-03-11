@@ -7,7 +7,7 @@ import { FileSharingService } from '../services/file-sharing/file-sharing.servic
 export class FilesSelectedGuard implements CanActivate {
 
   canActivate() {
-    return this.fileService.get('bpmn') != null;
+    return (this.fileService.get('bpmn') != null && this.fileService.get('xml') != null);
   }
 
   constructor(private fileService: FileSharingService) { }

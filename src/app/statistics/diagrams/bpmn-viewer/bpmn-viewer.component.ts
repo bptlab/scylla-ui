@@ -49,11 +49,6 @@ export class BpmnViewerComponent implements OnInit {
 
   }
 
-  public colorTask(taskID) {
-    console.log('colorTask wurde aufgerufen');
-    // TODO implement
-  }
-
   centerModel() {
     const canvas = this.viewer.get('canvas');
     canvas.zoom('fit-viewport');

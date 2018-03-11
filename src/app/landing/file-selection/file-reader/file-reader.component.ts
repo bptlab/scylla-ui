@@ -24,6 +24,9 @@ export class FileReaderComponent implements OnInit {
     }
   }
 
+  /*
+  Drag and drop is already implemented but commented out for now because the file extension is not checked yet
+
   handleDragEnter() {
     this.dragging = true;
   }
@@ -37,23 +40,14 @@ export class FileReaderComponent implements OnInit {
     this.dragging = false;
     this.handleInputChange(e);
   }
+*/
 
   handleInputChange(e) {
     const file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
-
-    const pattern = /-*/;
     const reader = new FileReader();
 
- // TODO check if file has correct file extension
-
     if (file) {
-      if (!file.type.match(pattern)) {
-        alert('invalid format');
-        return;
-      }
-
       this.loaded = false;
-
       reader.onload = this._handleReaderLoaded.bind(this);
       reader.readAsText(file);
       this.displayedFileName = file.name;
