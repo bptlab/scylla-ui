@@ -23,8 +23,8 @@ export class ActivityDetailComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       const name = params['activity_name'];
-      this.activity = this.service.resourceUtil.processes.process.activities.find(task => task.name === name);
-      this.timeUnit = this.service.resourceUtil.configuration.time_unit.toLowerCase();
+      this.activity = this.service.resourceUtilization.processes.process.activities.find(task => task.name === name);
+      this.timeUnit = this.service.resourceUtilization.configuration.time_unit.toLowerCase();
     });
   }
 

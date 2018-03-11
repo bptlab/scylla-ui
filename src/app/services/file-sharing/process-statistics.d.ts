@@ -5,7 +5,7 @@ export interface ResourceUtilization {
     configuration: Configuration;
     // processes: Process[];
     processes: {
-      process: Process[];
+      process: Process;
     };
     resources: Resource[];
 }

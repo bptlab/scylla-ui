@@ -10,3 +10,11 @@
     <app-bpmn-viewer #bpmnViewer></app-bpmn-viewer>
   </mat-card-content>
 </mat-card>
+<div *ngFor="let instance of activity.instances">
+  <mat-card>
+    <mat-card-title>Instance {{activity.name}}</mat-card-title>
+    <mat-card-content>
+      <app-activity-kpi [statistics]="instance" [timeUnit]="timeUnit"></app-activity-kpi>
+    </mat-card-content>
+  </mat-card>
+</div>
