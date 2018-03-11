@@ -8,6 +8,7 @@ import { Activity } from '../../../services/file-sharing/process-statistics';
 })
 export class ActivityKpiComponent implements OnInit {
   @Input() statistics: Activity;
+  @Input() timeUnit: string;
 
   constructor() { }
 

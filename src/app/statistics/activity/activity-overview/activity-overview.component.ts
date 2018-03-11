@@ -8,10 +8,12 @@ import { FileSharingService } from '../../../services/file-sharing/file-sharing.
   styleUrls: ['./activity-overview.component.css']
 })
 export class ActivityOverviewComponent {
-  public activities: Activity[];
+  activities: Activity[];
+  timeUnit: string;
 
   constructor(private service: FileSharingService) {
     this.activities = this.service.resourceUtil.processes.process.activities;
+    this.timeUnit = this.service.resourceUtil.configuration.time_unit.toLowerCase();
   }
 
 }
