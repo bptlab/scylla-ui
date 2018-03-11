@@ -9,9 +9,11 @@ import { ResourceUtilization } from '../../../services/file-sharing/process-stat
 })
 export class SimulationOverviewComponent implements OnInit {
   public statistics: ResourceUtilization;
+  timeUnit: string;
 
   constructor(private service: FileSharingService) {
     this.statistics = this.service.resourceUtil;
+    this.timeUnit = this.service.resourceUtil.configuration.time_unit.toLowerCase();
   }
 
   ngOnInit() {

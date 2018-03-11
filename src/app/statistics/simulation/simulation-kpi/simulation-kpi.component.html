@@ -1,7 +1,7 @@
 <div fxLayout="row" fxLayoutAlign="space-evenly center">
   <app-box-plot-diagram class="boxplot" [statistics]="statistics.cost" [label]="'Costs'" [chartId]="'Costs' + processID"></app-box-plot-diagram>
-  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.flow_time" [label]="'Flow Time'" [chartId]="'Flow Time' + processID"></app-box-plot-diagram>
-  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.waiting" [label]="'Waiting Time'" [chartId]="'Waiting Time' + processID"></app-box-plot-diagram>
-  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.effective" [label]="'Effective Time'" [chartId]="'Effective Time' + processID"></app-box-plot-diagram>
-  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.off_timetable" [label]="'Off-timetable Time'" [chartId]="'Off-timetable Time' + processID"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.flow_time" [label]="'Flow Time in ' + timeUnit" [chartId]="'Flow Time' + processID"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.waiting" [label]="'Waiting Time in ' + timeUnit" [chartId]="'Waiting Time' + processID"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.effective" [label]="'Effective Time in ' + timeUnit" [chartId]="'Effective Time' + processID"></app-box-plot-diagram>
+  <app-box-plot-diagram class="boxplot" [statistics]="statistics.time.off_timetable" [label]="'Off-timetable Time in ' + timeUnit" [chartId]="'Off-timetable Time' + processID"></app-box-plot-diagram>
 </div>

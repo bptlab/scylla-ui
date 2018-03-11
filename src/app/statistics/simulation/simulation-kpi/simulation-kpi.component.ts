@@ -10,6 +10,7 @@ import { Process } from '../../../services/file-sharing/process-statistics';
 export class SimulationKpiComponent implements OnInit {
   @Input() statistics: Process;
   @Input() processID: string;
+  @Input() timeUnit: string;
 
   constructor() { }
 
