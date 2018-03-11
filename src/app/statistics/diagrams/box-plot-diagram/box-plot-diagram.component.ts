@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, Input} from '@angular/core';
 import { Statistics } from '../../../services/file-sharing/process-statistics';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-box-plot-diagram',
