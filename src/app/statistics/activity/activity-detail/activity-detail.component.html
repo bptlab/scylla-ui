@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title>Details: <strong>{{activity.name}}</strong></mat-card-title>
+  <mat-card-content>
+    This is a detailed overview of the <strong>{{activity.name}}</strong> activity. See the KPIs of the whole simulation scenario on the card
+    below and the values for the activity instances below the BPMN diagram.
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-title>Simulation overview</mat-card-title>
+  <mat-card-content>
+    <app-activity-kpi [statistics]="activity" [timeUnit]="timeUnit"></app-activity-kpi>
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-title>Process model</mat-card-title>
+  <mat-card-content>
+    <app-bpmn-viewer #bpmn></app-bpmn-viewer>
+  </mat-card-content>
+  <mat-card-actions>
+    <a (click)="bpmn.centerModel()" mat-button>Recenter</a>
+  </mat-card-actions>
+</mat-card>
+<div *ngFor="let instance of activity.instances; index as i">
+  <mat-card>
+    <mat-card-title>Instance {{i}}</mat-card-title>
+    <mat-card-content>
+      Cost: {{instance.cost| number: '.0-2'}},
+      Effective Time: {{instance.time.effective | number: '.0-2'}},
+      Waiting Time: {{instance.time.effective | number: '.0-2'}},
+      Resources Idle Time: {{instance.time.resources_idle | number: '.0-2'}}
+    </mat-card-content>
+  </mat-card>
+</div>

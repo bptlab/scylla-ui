@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>Activities Overview</mat-card-title>
+  <mat-card-content>
+    This is an overview of the activities of your simulation. See the KPIs of the activities of the whole simulation scenario on the cards
+    below. Clicking on the <i>Show details</i> button will lead you to a detailed overview of the selected activity and its instances.
+  </mat-card-content>
+</mat-card>
+<div *ngFor="let activity of activities">
+  <mat-card>
+    <mat-card-title>{{activity.name}}</mat-card-title>
+    <mat-card-content>
+      <app-activity-kpi [statistics]="activity" [timeUnit]="timeUnit"></app-activity-kpi>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button routerLink="/statistics/activity/{{activity.name}}">Show Details</a>
+    </mat-card-actions>
+  </mat-card>
+</div>

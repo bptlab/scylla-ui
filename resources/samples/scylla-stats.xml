@@ -328,7 +328,7 @@
             <activities>
                 <activity>
                     <id>Task_1suqugc</id>
-                    <name>write paper</name>
+                    <name>eat</name>
                     <cost>
                         <min>0.0</min>
                         <max>2672.5</max>
@@ -396,7 +396,7 @@
                 </activity>
                 <activity>
                     <id>Task_0qt5qd2</id>
-                    <name>write thesis</name>
+                    <name>sleep</name>
                     <cost>
                         <min>0.0</min>
                         <max>1491.0</max>
@@ -464,7 +464,7 @@
                 </activity>
                 <activity>
                     <id>Task_0w9lsfx</id>
-                    <name>be happy</name>
+                    <name>code</name>
                     <cost>
                         <min>0.0</min>
                         <max>1150.0</max>
