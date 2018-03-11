@@ -5,7 +5,7 @@ export interface ResourceUtilization {
     configuration: Configuration;
     // processes: Process[];
     processes: {
-      process: Process;
+      process: Process[];
     };
     resources: Resource[];
 }
@@ -80,9 +80,9 @@ export interface ActivityInstance {
     id: string;
     cost: number;
     time: {
-        waiting: number;
-        effective: number;
-        resources_idle: number;
+      effective: number;
+      waiting: number;
+      resources_idle: number;
     };
 }
 
@@ -90,8 +90,8 @@ export interface Statistics {
     min: number;
     max: number;
     median: number;
-    avg: number;
     Q1: number;
     Q3: number;
+    avg: number;
     total: number;
 }

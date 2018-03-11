@@ -12,8 +12,8 @@ export class SimulationOverviewComponent implements OnInit {
   timeUnit: string;
 
   constructor(private service: FileSharingService) {
-    this.statistics = this.service.resourceUtil;
-    this.timeUnit = this.service.resourceUtil.configuration.time_unit.toLowerCase();
+    this.statistics = this.service.resourceUtilization;
+    this.timeUnit = this.service.resourceUtilization.configuration.time_unit.toLowerCase();
   }
 
   ngOnInit() {

@@ -12,8 +12,8 @@ export class ActivityOverviewComponent {
   timeUnit: string;
 
   constructor(private service: FileSharingService) {
-    this.activities = this.service.resourceUtil.processes.process.activities;
-    this.timeUnit = this.service.resourceUtil.configuration.time_unit.toLowerCase();
+    this.activities = this.service.resourceUtilization.processes.process.activities;
+    this.timeUnit = this.service.resourceUtilization.configuration.time_unit.toLowerCase();
   }
 
 }

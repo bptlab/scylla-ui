@@ -11,7 +11,7 @@ export class StatisticsComponent implements OnInit {
   private statistics: ResourceUtilization;
 
   constructor(private service: FileSharingService) {
-    this.statistics = this.service.resourceUtil;
+    this.statistics = this.service.resourceUtilization;
   }
 
   ngOnInit() {

@@ -10,7 +10,7 @@ export class FileSharingService {
   private _bpmn: File;
   private _xes: File;
   private _xml: File;
-  public resourceUtil: ResourceUtilization;
+  public resourceUtilization: ResourceUtilization;
 
   private parseString = require('xml2js').parseString;
 
@@ -56,7 +56,7 @@ export class FileSharingService {
     const test = new Parser({valueProcessors: [parseNumbers], explicitRoot: false, explicitArray: false});
 
     this.parseString(this.getData('xml'), (err, result) => {
-      that.resourceUtil = cleanXML(result).resourceUtilization;
+      that.resourceUtilization = cleanXML(result).resourceUtilization;
     });
   }
 }
