@@ -21,7 +21,7 @@ export class ResourceDetailComponent implements OnInit {
   ) {
     this.route.params.subscribe((params: Params) => {
     const resourceType = params['resource_type'];
-    this.resource = this.service.resourceUtilization.resources.find(item => item.type = resourceType);
+    this.resource = this.service.resourceUtilization.resources.find(item => item.type === resourceType);
     this.timeUnit = this.service.resourceUtilization.configuration.time_unit.toLowerCase();
     });
   }
