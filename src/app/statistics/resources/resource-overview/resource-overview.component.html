@@ -1,3 +1,10 @@
+<mat-card>
+  <mat-card-title>Resources Overview</mat-card-title>
+  <mat-card-content>
+    This is an overview of the resources of your simulatios scenario. See the KPIs of the resources of your simulation on the cards
+    below. Clicking on the <i>Show details</i> button will lead you to a detailed overview of the selected resource and its instances.
+  </mat-card-content>
+</mat-card>
 <mat-card *ngFor="let resource of resources">
   <mat-card-title>{{ resource.type }}</mat-card-title>
   <mat-card-content>
