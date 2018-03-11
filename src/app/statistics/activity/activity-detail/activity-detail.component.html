@@ -1,5 +1,11 @@
 <mat-card>
-  <mat-card-title>{{activity.name}}</mat-card-title>
+  <mat-card-title>{{activity.name}} details</mat-card-title>
+  <mat-card-content>
+    This is a detailed overview of the {{activity.name}}
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-title>Simulation overview: {{activity.name}}</mat-card-title>
   <mat-card-content>
     <app-activity-kpi [statistics]="activity" [timeUnit]="timeUnit"></app-activity-kpi>
   </mat-card-content>
@@ -7,14 +13,20 @@
 <mat-card>
   <mat-card-title>Process model</mat-card-title>
   <mat-card-content>
-    <app-bpmn-viewer #bpmnViewer></app-bpmn-viewer>
+    <app-bpmn-viewer #bpmn></app-bpmn-viewer>
   </mat-card-content>
+  <mat-card-actions>
+    <a (click)="bpmn.centerModel()" mat-button>Recenter</a>
+  </mat-card-actions>
 </mat-card>
-<div *ngFor="let instance of activity.instances">
+<div *ngFor="let instance of activity.instances; index as i">
   <mat-card>
-    <mat-card-title>Instance {{activity.name}}</mat-card-title>
+    <mat-card-title>Instance {{i}}</mat-card-title>
     <mat-card-content>
-      <app-activity-kpi [statistics]="instance" [timeUnit]="timeUnit"></app-activity-kpi>
+      Cost: {{instance.cost}}
+      Effective Time: {{instance.time.effective}}
+      Waiting Time: {{instance.time.effective}}
+      Resources Idle Time: {{instance.time.resources_idle}}
     </mat-card-content>
   </mat-card>
 </div>
