@@ -2,6 +2,7 @@ import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {Activity} from '../../../services/file-sharing/process-statistics';
 import { FileSharingService } from '../../../services/file-sharing/file-sharing.service';
+import { DecimalPipe} from '@angular/common';
 
 @Component({
   selector: 'app-activity-detail',
