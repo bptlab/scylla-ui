@@ -50,7 +50,7 @@ As an alternative, you can pull our image from Docker Hub by running `docker pul
 
 ### Running a container
 
-In order to run the app, we suggest the following command `docker run -p "8080:4200" --rm -d bptlab/scylla-ui`.
+In order to run the app, we suggest the following command `docker run -p "8080:4200" --rm -d bptlab/scylla-ui`. Navigate to `http://localhost:8080/`.
 
 ## Documentation
 
