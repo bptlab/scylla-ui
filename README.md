@@ -13,13 +13,13 @@ This project is developed using Angular CLI. In order to run and this project or
 
 ## Table of Contents
 
-[Setup](https://github.com/bptlab/scylla-ui#setup)
-[Development server](https://github.com/bptlab/scylla-ui#development-server)
-[Build](https://github.com/bptlab/scylla-ui#build)
-[Running unit tests](https://github.com/bptlab/scylla-ui#running-unit-tests)
-[Docker](https://github.com/bptlab/scylla-ui#docker)
-[Documentation](https://github.com/bptlab/scylla-ui#documentation)
-[License](https://github.com/bptlab/scylla-ui#license)
+* [Setup](https://github.com/bptlab/scylla-ui#setup)
+* [Development server](https://github.com/bptlab/scylla-ui#development-server)
+* [Build](https://github.com/bptlab/scylla-ui#build)
+* [Running unit tests](https://github.com/bptlab/scylla-ui#running-unit-tests)
+* [Docker](https://github.com/bptlab/scylla-ui#docker)
+* [Documentation](https://github.com/bptlab/scylla-ui#documentation)
+* [License](https://github.com/bptlab/scylla-ui#license)
 
 ## Setup
 
