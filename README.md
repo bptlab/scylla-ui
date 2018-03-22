@@ -7,6 +7,7 @@
 This project is developed using Angular CLI. In order to run and this project or develop on your own, you need to setup the following:
 
 * [Angular CLI (^1.5.0)](https://github.com/angular/angular-cli)
+* Optional: [Docker](https://docs.docker.com/install/)
 
 ## Table of Contents
 
