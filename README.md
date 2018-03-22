@@ -2,9 +2,6 @@
 
 [![Build Status](https://travis-ci.org/bptlab/scylla-ui.svg?branch=master)](https://travis-ci.org/bptlab/scylla-ui)[![Maintainability](https://api.codeclimate.com/v1/badges/0ae17f1eb85a228f53dd/maintainability)](https://codeclimate.com/github/bptlab/scylla-ui/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/0ae17f1eb85a228f53dd/test_coverage)](https://codeclimate.com/github/bptlab/scylla-ui/test_coverage)
 
-[![GitHub forks](https://img.shields.io/github/forks/bptlab/scylla-ui.svg?style=social&label=Fork)](https://github.com/bptlab/scylla-ui/fork)
-[![GitHub stars](https://img.shields.io/github/stars/bptlab/scylla-ui.svg?style=social&label=Star)](https://github.com/bptlab/scylla-ui)
-
 ## Prerequisites
 
 This project is developed using Angular CLI. In order to run and this project or develop on your own, you need to setup the following:
