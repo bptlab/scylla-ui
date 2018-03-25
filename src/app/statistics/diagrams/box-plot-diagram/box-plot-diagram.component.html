@@ -2,7 +2,8 @@
   <!-- Boxplot diagram will appear here -->
 </div>
 <div *ngIf="statistics.avg">
-  Average: {{statistics.avg | number: '.0-2'}},
+  Average: {{statistics.avg | number: '.0-2'}}
+  <br>
   Total: {{statistics.total | number: '.0-2'}}
 </div>
 
