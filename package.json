@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:docker": "docker build -t bptlab/scylla-ui:latest .",
-    "start:docker": "docker run -d -p 8080:4200 bptlab/scylla-ui:latest"
+    "start:docker": "docker run -d -p 8080:80 bptlab/scylla-ui:latest"
   },
   "private": true,
   "dependencies": {
