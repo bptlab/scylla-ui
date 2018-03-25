@@ -1,1 +1,4 @@
 node_modules
+coverage
+e2e
+out

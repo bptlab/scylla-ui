@@ -5,7 +5,7 @@ FROM node:8-alpine as builder
 
 # git is required to install some dependencies with npm
 RUN apk update && apk upgrade && \
-    apk add --no-cache bash git 
+    apk add --no-cache bash git
 
 COPY package.json package-lock.json ./
 
@@ -19,7 +19,7 @@ WORKDIR /ng-app
 COPY . .
 
 ## Build the angular app in production mode and store the artifacts in dist folder
-RUN $(npm bin)/ng build --env=prod
+RUN $(npm bin)/ng build --env=prod --base-href "/scylla-ui/"
 
 
 ### STAGE 2: Setup ###
@@ -33,6 +33,6 @@ COPY config/nginx/default.conf /etc/nginx/conf.d/
 RUN rm -rf /usr/share/nginx/html/*
 
 ## From 'builder' stage copy over the artifacts in dist folder to default nginx public folder
-COPY --from=builder /ng-app/dist /usr/share/nginx/html
+COPY --from=builder /ng-app/dist /usr/share/nginx/html/scylla-ui
 
 CMD ["nginx", "-g", "daemon off;"]
