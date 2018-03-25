@@ -6,7 +6,7 @@ import { StatisticsRoutingModule } from './statistics-routing.module';
 import { SimulationOverviewComponent } from './simulation/simulation-overview/simulation-overview.component';
 import { MenuModule } from '../menu/menu.module';
 import { FilesSelectedGuard } from '../guards/files-selected.guard';
-import { MatSidenavModule } from '@angular/material';
+import {MatSidenavModule, MatTooltipModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -34,8 +34,9 @@ import { ResourceDetailComponent } from './resources/resource-detail/resource-de
     MatMenuModule,
     MatCardModule,
     MatButtonModule,
-    FlexLayoutModule
-  ],
+    FlexLayoutModule,
+    MatTooltipModule
+],
   declarations: [
     StatisticsComponent,
     BpmnViewerComponent,

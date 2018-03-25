@@ -3,22 +3,22 @@
         <main class="content">
           <mat-drawer-container class="example-container">
               <mat-drawer id="left_menu" mode="side" opened="true">
-                <div>
+                <div matTooltip="Simulation Overview" [matTooltipPosition]="position">
                   <a routerLink="/statistics/simulation-overview">
                     <mat-icon>dashboard</mat-icon>
                   </a>
                 </div>
-                <div>
+                <div matTooltip="Resources Overview" [matTooltipPosition]="position">
                   <a routerLink="/statistics/resource-overview">
                     <mat-icon>person</mat-icon>
                   </a>
                 </div>
-                <div>
+                <div matTooltip="Activities Overview" [matTooltipPosition]="position">
                   <a routerLink="/statistics/activity-overview">
                     <mat-icon>view_stream</mat-icon>
                   </a>
                 </div>
-                <div>
+                <div matTooltip="Select Other Files" [matTooltipPosition]="position">
                   <a mat-icon-button [matMenuTriggerFor]="menu">
                     <mat-icon>more_vert</mat-icon>
                   </a>
