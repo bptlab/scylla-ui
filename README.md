@@ -46,11 +46,11 @@ You can build the image by running `docker build -t bptlab/scylla-ui .`. This wi
 
 ### Pull image from [hub.docker.com](https://hub.docker.com/r/bptlab/scylla-ui/)
 
-As an alternative, you can pull our image from Docker Hub by running `docker pull bptlab/scylla-ui`.
+As an alternative, you can pull our image from Docker Hub by running `npm run build:docker` (or `docker pull bptlab/scylla-ui`).
 
 ### Running a container
 
-In order to run the app, we suggest the following command `docker run -p "8080:4200" --rm -d bptlab/scylla-ui`. Navigate to `http://localhost:8080/`.
+In order to run the app, we suggest the following command `npm run start:docker` (or `docker run -p "8080:4200" --rm -d bptlab/scylla-ui`). Navigate to `http://localhost:8080/`.
 
 ## Documentation
 
