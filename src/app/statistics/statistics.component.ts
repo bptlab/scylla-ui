@@ -9,6 +9,7 @@ import { ResourceUtilization } from '../services/file-sharing/process-statistics
 })
 export class StatisticsComponent implements OnInit {
   private statistics: ResourceUtilization;
+  position = 'after';
 
   constructor(private service: FileSharingService) {
     this.statistics = this.service.resourceUtilization;
